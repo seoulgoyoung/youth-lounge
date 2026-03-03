@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울고용센터 청년ON라운지</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&display=swap');
+        
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #f0faff;
+            word-break: keep-all;
+        }
+
+        /* 히어로 섹션 물결 배경 */
+        .hero-section {
+            background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 물결 패턴 레이어 */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+        }
+
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(150% + 1.3px);
+            height: 80px;
+        }
+
+        /* 하단 푸터 - 아치형 단색 블루 배경 */
+        .footer-arch {
+            background-color: #0ea5e9;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            margin-top: 50px;
+        }
+
+        .wide-tracking {
+            letter-spacing: 0.15em;
+        }
+
+        .lightbulb-o {
+            color: #fde047;
+            filter: drop-shadow(0 0 15px rgba(253, 224, 71, 0.9));
+            display: inline-flex;
+            vertical-align: middle;
+        }
+
+        .card-shadow {
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        .popup-content {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1001;
+            animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popUp {
+            from { opacity: 0; transform: translate(-50%, -45%) scale(0.9); }
+            to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+        }
+
+        /* 캐릭터 위치 및 터치 애니메이션 */
+        .character-touch {
+            animation: touch-float 3s ease-in-out infinite;
+            transform-origin: bottom center;
+        }
+
+        @keyframes touch-float {
+            0%, 100% { transform: translateY(0) translateX(15px); }
+            50% { transform: translateY(-8px) translateX(15px); }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- 커스텀 팝업 -->
+    <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
+    <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
+        <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5">
+            <i class="fas fa-info-circle text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3 text-slate-900">알림</h3>
+        <p class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">해당 프로그램은<br><b class="text-blue-600">추후 오픈 예정</b>입니다.</p>
+        <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg">확인</button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="hero-section text-white pt-16 pb-32 px-6 text-center">
+        <div class="max-w-md mx-auto flex flex-col items-center relative z-10">
+            <p class="text-[10px] font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-4 uppercase tracking-[0.2em]">
+                Start & Completion
+            </p>
+            
+            <p class="text-xs font-semibold opacity-90 mb-1">청년 취업의 시작과 완성</p>
+            
+            <h1 class="text-2xl font-black wide-tracking leading-tight mb-0">
+                서울고용센터<br>
+                <span class="text-4xl block mt-1">청년<span class="lightbulb-o mx-1">
+                    <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
+                    </svg>
+                </span>N라운지</span>
+            </h1>
+
+            <!-- 고드래곤 캐릭터 (글자 바로 아래 밀착, 손이 전구를 터치하도록 배치) -->
+            <div class="relative w-48 h-auto character-touch -mt-4">
+                <img src="4.png" alt="고드래곤" class="w-full drop-shadow-2xl">
+            </div>
+        </div>
+
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58.47,81.45,119.26,73.1,180.77,71.49,233.29,70.1,283.33,63.53,321.39,56.44Z" fill="#f0f9ff"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
+        
+        <!-- (1) 이달의 소식 -->
+        <section class="mb-14">
+            <div class="bg-white rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
+                <div class="mb-10 text-center">
+                    <h2 class="text-2xl font-black text-sky-600 mb-2">이달의 소식</h2>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">News & Events</p>
+                </div>
+                
+                <div class="space-y-6">
+                    <!-- 예금보험공사 -->
+                    <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 italic text-sky-900 leading-tight">일자리톡톡 - <span class="text-slate-800 font-semibold">현직자 토크</span></h3>
+                        <p class="font-black text-blue-600 mb-4">&lt;예금보험공사 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 2026. 3. 6. (금) 14:00</p>
+                            <p>📍 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <a href="https://forms.gle/1Yr6jiLpTS9oHmSTA" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <!-- 현대자동차 -->
+                    <div class="px-2 border-l-4 border-slate-300">
+                        <h3 class="font-bold text-slate-700 italic mb-1 text-sm">일자리톡톡 - <span class="text-slate-400 font-semibold">현직자 토크</span></h3>
+                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;현대자동차 편&gt;</p>
+                        <p class="text-[11px] text-slate-400 mb-4">📅 2026. 3. 18. (수) 14:00</p>
+                        <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
+                    </div>
+
+                    <!-- 모의면접 DAY -->
+                    <div class="bg-orange-50 rounded-[2.5rem] p-6 border-2 border-orange-200">
+                        <h3 class="text-lg font-black text-orange-600 mb-1">모의면접 DAY</h3>
+                        <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">직무별 현직자와 함께하는 실전같은 면접연습</p>
+                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">신청 예정</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (2) 상담 & 컨설팅 -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
+                <span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>
+                상담 & 컨설팅
+            </h2>
+            <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200">
+                <div class="space-y-4">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-slate-800 text-sm mb-1">1:1 취업 컨설팅</h4>
+                            <p class="text-[10px] text-slate-400 font-medium">진로 / 이력서 / 면접 심층 맞춤 컨설팅</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
+                    </a>
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6602299" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-slate-800 text-sm mb-1">주거복지상담</h4>
+                            <p class="text-[10px] text-slate-400 font-medium">매월 2,3,4주 수요일 | 공공임대 및 1인가구 서비스</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- (3) 시설 예약 -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900">
+                <span class="w-1.5 h-6 bg-emerald-500 rounded-full"></span>
+                시설 예약
+            </h2>
+            <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200">
+                <div class="space-y-4">
+                    <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white group hover:border-emerald-300 transition-colors">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center border-2 border-emerald-200">
+                                <i class="fas fa-book-open text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-base">스터디룸</h4>
+                        </div>
+                        <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed pl-1">
+                            최대 6명 수용 가능한 최적의 스터디 공간입니다. (팀별 예약 가능)
+                        </p>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
+                    </div>
+                    
+                    <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white group hover:border-indigo-300 transition-colors">
+                        <div class="flex items-center gap-4 mb-3">
+                            <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center border-2 border-indigo-200">
+                                <i class="fas fa-robot text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-base">AI면접실</h4>
+                        </div>
+                        <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed pl-1">
+                            인공지능 기반의 최신 면접 연습 시스템으로 실전 면접에 대비하세요.
+                        </p>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" class="flex justify-center items-center py-3 bg-indigo-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (4) 찾아오시는 길 -->
+        <section class="mb-12 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-slate-900">
+                <i class="fas fa-map-marked-alt text-sky-500"></i>
+                찾아오시는 길
+            </h2>
+            <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200 overflow-hidden">
+                <div class="w-full h-52 mb-6">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.52737158782!2d126.9859!3d37.5663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e8a6000001%3A0xc3991206dfd8d641!2z7ISc7Jq46rOg7Jqp64 노동청!5e0!3m2!1sko!2skr!4v1710000000000" 
+                        class="w-full h-full border-0 grayscale-[0.2]" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="text-center pb-2">
+                    <p class="font-black text-slate-800 text-base">서울고용센터 1층 청년ON라운지</p>
+                    <p class="text-[11px] text-slate-400 font-medium">서울특별시 중구 삼일대로 363 (서울지방고용노동청 1층)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer - 아치형 단색 블루 배경 -->
+        <footer class="footer-arch text-center pt-20 pb-16 -mx-5 px-5 shadow-[0_-10px_20px_-5px_rgba(14,165,233,0.3)]">
+            <h3 class="text-white font-black text-xl mb-12 wide-tracking leading-relaxed">
+                청년의 내일을 여는 곳,<br>청년ON라운지
+            </h3>
+            
+            <div class="flex justify-center gap-8 mb-16">
+                <a href="https://www.instagram.com/moel_seoulew/" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-pink-500 hover:scale-110 transition-transform">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://blog.naver.com/twd0908" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-emerald-500 hover:scale-110 transition-transform">
+                    <i class="fas fa-blog"></i>
+                </a>
+                <a href="https://open.kakao.com/o/gyJqfYei" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-yellow-500 hover:scale-110 transition-transform">
+                    <i class="fas fa-comment"></i>
+                </a>
+            </div>
+            
+            <p class="text-[10px] text-white/70 font-bold uppercase tracking-widest">
+                © 2026 Seoul Employment Center Youth ON Lounge
+            </p>
+        </footer>
+
+    </main>
+
+    <script>
+        const overlay = document.getElementById('popupOverlay');
+        const box = document.getElementById('popupBox');
+
+        function openPopup() {
+            overlay.style.display = 'block';
+            box.style.display = 'block';
+        }
+
+        function closePopup() {
+            overlay.style.display = 'none';
+            box.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
