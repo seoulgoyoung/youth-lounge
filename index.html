@@ -85,7 +85,7 @@
             to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
         }
 
-        /* 캐릭터 위치 및 터치 애니메이션 */
+        /* 메인 캐릭터 터치 애니메이션 (간격 좁힘 유지) */
         .character-touch {
             animation: touch-float 3s ease-in-out infinite;
             transform-origin: bottom center;
@@ -112,12 +112,12 @@
     <!-- 커스텀 팝업 -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
-        <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
+        <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5">
             <i class="fas fa-info-circle text-2xl"></i>
         </div>
         <h3 class="text-xl font-bold mb-3 text-slate-900">알림</h3>
         <p class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">해당 프로그램은<br><b class="text-blue-600">추후 오픈 예정</b>입니다.</p>
-        <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg shadow-sky-100">확인</button>
+        <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg">확인</button>
     </div>
 
     <!-- Header Section -->
@@ -138,7 +138,7 @@
                 </span>N라운지</span>
             </h1>
 
-            <!-- 고드래곤 캐릭터 -->
+            <!-- 고드래곤 캐릭터 (O를 가리키는 좁은 간격 유지) -->
             <div class="relative w-48 h-auto character-touch -mt-4">
                 <img src="4.png" alt="고드래곤" class="w-full drop-shadow-2xl">
             </div>
@@ -180,7 +180,7 @@
                         <h3 class="font-bold text-slate-700 italic mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                         <p class="font-bold text-slate-400 mb-3 text-sm">&lt;현대자동차 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4 font-medium">
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
                             <p>📅 일정: 2026. 3. 18. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
@@ -192,7 +192,7 @@
                         <h3 class="font-bold text-slate-700 italic mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                         <p class="font-bold text-slate-400 mb-3 text-sm">&lt;신한은행 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4 font-medium">
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
                             <p>📅 일정: 2026. 3. 27. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
@@ -207,7 +207,7 @@
                             <p>📅 일정: 2026. 3. 27. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">신청 예정</button>
+                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-2xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">신청 예정</button>
                     </div>
                 </div>
             </div>
@@ -223,12 +223,12 @@
                 <div class="absolute -right-4 -top-4 w-24 h-24 bg-pink-50 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
                 
                 <div class="flex flex-col items-center py-4 relative z-10">
+                    <!-- 캐릭터 파일명을 8.png로 수정했습니다 -->
                     <div class="relative w-28 h-28 mb-4 webzine-char-float">
-                        <img src="8.jpg" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl border-2 border-pink-100 shadow-sm">
+                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl border-2 border-pink-100 shadow-sm">
                     </div>
                     
                     <h3 class="text-lg font-black text-slate-800 mb-1">청년ON웹진</h3>
-                    <!-- 뱀 이모지 삭제 및 텍스트 정리 -->
                     <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed text-center px-4">
                         청년ON라운지의 현장과 후기를 한눈에!✨
                     </p>
