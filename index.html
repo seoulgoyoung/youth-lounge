@@ -108,10 +108,7 @@
             50% { transform: translateY(-8px) translateX(15px); }
         }
 
-        /* 웹진 캐릭터 정적 상태 */
-        .webzine-char-static {
-            /* 애니메이션 없음 */
-        }
+        /* 웹진 캐릭터 애니메이션 제거된 정적 상태 */
     </style>
 </head>
 <body class="text-slate-800">
@@ -142,7 +139,7 @@
                     <svg width="45" height="45" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/>
                     </svg>
-                </span><span class="text-[#fde047]">N</span> 라운지</span>
+                </span><span class="text-[#fde047]">N</span>&nbsp; 라운지</span>
             </h1>
 
             <div class="relative w-48 h-auto character-touch -mt-4">
@@ -327,15 +324,21 @@
             <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200 overflow-hidden">
                 <div class="w-full h-52 mb-6">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.52737158782!2d126.9859!3d37.5663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e8a6000001%3A0xc3991206dfd8d641!2z7ISc7Jq46rOg7Jqp64 노동청!5e0!3m2!1sko!2skr!4v1710000000000" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.5186256247943!2d126.9859!3d37.5664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e8a6000001%3A0xc3991206dfd8d641!2z7ISc7Jq46rOg7Jqp67O17KeA7ZSM65-s7Iqk7IS87YSw!5e0!3m2!1sko!2skr!4v1710000000000" 
                         class="w-full h-full border-0 grayscale-[0.2]" 
                         allowfullscreen="" 
                         loading="lazy">
                     </iframe>
                 </div>
                 <div class="text-center pb-2">
-                    <p class="font-black text-slate-800 text-base">서울고용센터 1층 청년ON라운지</p>
-                    <p class="text-[11px] text-slate-400 font-medium">서울특별시 중구 삼일대로 363 (서울지방고용노동청 1층)</p>
+                    <p class="font-black text-slate-800 text-base">서울고용복지플러스센터 1층</p>
+                    <p class="text-[11px] text-slate-400 font-medium mb-6">서울특별시 중구 삼일대로 363 (서울지방고용노동청)</p>
+                    
+                    <!-- 요청하신 네이버 지도 길찾기 상세 링크로 수정되었습니다 -->
+                    <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-sm font-bold shadow-lg active:scale-95 transition-all">
+                        <i class="fas fa-location-arrow"></i>
+                        네이버 지도로 길찾기
+                    </a>
                 </div>
             </div>
         </section>
