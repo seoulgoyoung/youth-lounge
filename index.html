@@ -50,11 +50,23 @@
             letter-spacing: 0.15em;
         }
 
+        /* 전구 로고 반짝임 애니메이션 효과 */
         .lightbulb-o {
             color: #fde047;
-            filter: drop-shadow(0 0 15px rgba(253, 224, 71, 0.9));
             display: inline-flex;
             vertical-align: middle;
+            animation: bulb-sparkle 1.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes bulb-sparkle {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(253, 224, 71, 0.6));
+                transform: scale(1);
+            }
+            100% {
+                filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1));
+                transform: scale(1.1);
+            }
         }
 
         .card-shadow {
@@ -94,16 +106,6 @@
         @keyframes touch-float {
             0%, 100% { transform: translateY(0) translateX(15px); }
             50% { transform: translateY(-8px) translateX(15px); }
-        }
-
-        /* 웹진 캐릭터 애니메이션 */
-        .webzine-char-float {
-            animation: webzine-float 4s ease-in-out infinite;
-        }
-
-        @keyframes webzine-float {
-            0%, 100% { transform: translateY(0) rotate(-5deg); }
-            50% { transform: translateY(-10px) rotate(5deg); }
         }
     </style>
 </head>
@@ -161,6 +163,7 @@
                 </div>
                 
                 <div class="space-y-6">
+                    <!-- 예금보험공사 -->
                     <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 italic text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -208,33 +211,6 @@
             </div>
         </section>
 
-        <!-- (웹진) 청년ON웹진 카테고리 -->
-        <section class="mb-14 px-1">
-            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
-                <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
-                청년ON웹진
-            </h2>
-            <div class="bg-white rounded-[2.5rem] p-8 card-shadow border-2 border-slate-200 relative overflow-hidden group">
-                <div class="absolute -right-4 -top-4 w-24 h-24 bg-pink-50 rounded-full opacity-50 group-hover:scale-110 transition-transform"></div>
-                
-                <div class="flex flex-col items-center py-4 relative z-10">
-                    <!-- 파일명을 8.png로 확실하게 지정했습니다 -->
-                    <div class="relative w-32 h-32 mb-4 webzine-char-float">
-                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl">
-                    </div>
-                    
-                    <h3 class="text-lg font-black text-slate-800 mb-1">청년ON웹진</h3>
-                    <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed text-center px-4">
-                        청년ON라운지의 현장과 후기를 한눈에!✨
-                    </p>
-                    
-                    <div class="inline-block px-12 py-4 bg-pink-50 text-pink-500 rounded-full text-base font-black tracking-[0.4em] border-2 border-pink-200 animate-pulse shadow-md shadow-pink-100">
-                        COMING SOON
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- (2) 상담 & 컨설팅 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
@@ -260,7 +236,7 @@
                     <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7155040" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
                         <div class="flex-1">
                             <h4 class="font-bold text-slate-800 text-sm mb-1">금융/재무설계 상담</h4>
-                            <p class="text-[10px] text-slate-400 font-medium">매주 화요일 | 자산·부채 관리 및 금융 일반 상담</p>
+                            <p class="text-[10px] text-slate-400 font-medium text-wrap">매주 화요일 | 자산·부채 관리 및 금융 일반 상담</p>
                         </div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                     </a>
@@ -293,7 +269,7 @@
                         <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed pl-1">
                             최대 6명 수용 가능한 최적의 스터디 공간입니다.
                         </p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md shadow-emerald-100">예약하기</a>
                     </div>
                     
                     <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white group hover:border-indigo-300 transition-colors">
@@ -306,7 +282,7 @@
                         <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed pl-1">
                             인공지능 기반의 최신 면접 연습 시스템입니다.
                         </p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" class="flex justify-center items-center py-3 bg-indigo-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" class="flex justify-center items-center py-3 bg-indigo-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md shadow-indigo-100">예약하기</a>
                     </div>
                 </div>
             </div>
