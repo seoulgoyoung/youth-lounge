@@ -111,7 +111,7 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 커스텀 팝업 -->
+    <!-- 커스텀 팝업 (아직 오픈되지 않은 프로그램용) -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
         <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
@@ -163,6 +163,7 @@
                 </div>
                 
                 <div class="space-y-6">
+                    <!-- 예금보험공사 (기존 활성) -->
                     <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -175,17 +176,21 @@
                         <a href="https://forms.gle/1Yr6jiLpTS9oHmSTA" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <div class="px-2 border-l-4 border-slate-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;현대자동차 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
+                    <!-- 현대자동차 (신규 활성 수정됨) -->
+                    <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-black text-blue-600 mb-4">&lt;현대자동차 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
                             <p>📅 일정: 2026. 3. 18. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
+                        <!-- 새로운 현대자동차 신청 링크 적용 -->
+                        <a href="https://forms.gle/FQiHgG7qW3K26Vcn6" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
+                    <!-- 신한은행 (오픈 예정 유지) -->
                     <div class="px-2 border-l-4 border-slate-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -197,6 +202,7 @@
                         <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
                     </div>
 
+                    <!-- 모의면접 DAY (신청 예정 유지) -->
                     <div class="bg-orange-50 rounded-[2.5rem] p-6 border-2 border-orange-200">
                         <h3 class="text-lg font-black text-orange-600 mb-1">모의면접 DAY</h3>
                         <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">직무별 현직자와 함께하는 실전같은 면접연습</p>
@@ -204,7 +210,7 @@
                             <p>📅 일정: 2026. 3. 27. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">신청 예정</button>
+                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-2xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">신청 예정</button>
                     </div>
                 </div>
             </div>
@@ -247,7 +253,7 @@
                     <a href="https://booking.naver.com/booking/6/bizes/1355869" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
                         <div class="flex-1">
                             <h4 class="font-bold text-slate-800 text-sm mb-1">1:1 취업 컨설팅</h4>
-                            <p class="text-[10px] text-slate-400 font-medium">개인별 맞춤 심층 진로/이력서/면접 컨설팅</p>
+                            <p class="text-[10px] text-slate-400 font-medium text-wrap">개인별 맞춤 심층 진로/이력서/면접 컨설팅</p>
                         </div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                     </a>
@@ -294,7 +300,7 @@
                         <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed pl-1">
                             최대 6명 수용 가능한 최적의 스터디 공간입니다.
                         </p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md shadow-emerald-100">예약하기</a>
                     </div>
                     
                     <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white group hover:border-indigo-300 transition-colors">
