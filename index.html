@@ -58,6 +58,50 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
+        /* 라인업 섹션 반짝이는 효과 (Shimmer & Sparkle) */
+        .lineup-card {
+            position: relative;
+            overflow: hidden;
+            background: white;
+            border: 2px solid #e2e8f0;
+        }
+
+        /* 배경을 쓸고 지나가는 빛 효과 */
+        .lineup-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 45%,
+                rgba(56, 189, 248, 0.05) 50%,
+                transparent 55%
+            );
+            animation: shimmer-sweep 4s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes shimmer-sweep {
+            0% { transform: translate(-30%, -30%) rotate(0deg); }
+            100% { transform: translate(10%, 10%) rotate(0deg); }
+        }
+
+        /* 제목 강조 반짝임 */
+        .sparkle-text {
+            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: text-shine 3s linear infinite;
+        }
+
+        @keyframes text-shine {
+            to { background-position: 200% center; }
+        }
+
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
 
         .popup-overlay {
@@ -125,18 +169,18 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 행사 & 프로그램 라인업 섹션 -->
+        <!-- (1) 행사 & 프로그램 라인업 섹션 (수정: 반짝이는 효과 추가) -->
         <section class="mb-14">
-            <div class="bg-white rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
-                <div class="mb-10 text-center">
+            <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
+                <div class="mb-10 text-center relative z-10">
                     <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
-                    <h2 class="text-2xl font-black text-sky-600 mb-2 leading-tight drop-shadow-sm">행사&프로그램 라인업</h2>
-                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule</p>
+                    <h2 class="text-3xl font-black sparkle-text mb-2 leading-tight drop-shadow-sm">행사&프로그램 라인업</h2>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
                 </div>
                 
-                <div class="space-y-8">
+                <div class="space-y-8 relative z-10">
                     <!-- 1. 신한은행 (3/27) -->
-                    <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -149,7 +193,7 @@
                     </div>
 
                     <!-- 2. 근로복지공단 (4/3) -->
-                    <div class="bg-sky-50 rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden">
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -162,7 +206,7 @@
                     </div>
 
                     <!-- 3. 넷마블 (4/15) -->
-                    <div class="px-2 border-l-4 border-slate-300">
+                    <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                         <p class="font-bold text-slate-400 mb-3 text-sm">&lt;넷마블 편&gt;</p>
@@ -170,11 +214,11 @@
                             <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
+                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
                     <!-- 4. 한미약품 (4/17) -->
-                    <div class="px-2 border-l-4 border-slate-300">
+                    <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                         <p class="font-bold text-slate-400 mb-3 text-sm">&lt;한미약품 편&gt;</p>
@@ -182,11 +226,11 @@
                             <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
+                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
                     <!-- 5. 펄어비스 (4/22) -->
-                    <div class="px-2 border-l-4 border-slate-300">
+                    <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                         <p class="font-bold text-slate-400 mb-3 text-sm">&lt;펄어비스 편&gt;</p>
@@ -194,11 +238,11 @@
                             <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-200 text-slate-500 rounded-xl font-bold text-xs border-2 border-slate-300">오픈 예정</button>
+                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
                     <!-- 6. 프레디저 진로설계 (4/24) -->
-                    <div class="bg-orange-50 rounded-[2.5rem] p-6 border-2 border-orange-200">
+                    <div class="bg-orange-50/80 rounded-[2.5rem] p-6 border-2 border-orange-200 shadow-sm">
                         <h3 class="text-lg font-black text-orange-600 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
                         <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
                         <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
