@@ -129,14 +129,14 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 커스텀 팝업 -->
+    <!-- 커스텀 팝업 (동적 텍스트 적용 가능하게 id 부여) -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
         <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
             <i class="fas fa-info-circle text-2xl"></i>
         </div>
         <h3 class="text-xl font-bold mb-3 text-slate-900">알림</h3>
-        <p class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">해당 콘텐츠는<br><b class="text-blue-600">추후 공개 예정</b>입니다.</p>
+        <p id="popupMessage" class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">해당 콘텐츠는<br><b class="text-blue-600">추후 공개 예정</b>입니다.</p>
         <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg shadow-sky-100">확인</button>
     </div>
 
@@ -189,7 +189,7 @@
                         <a href="https://forms.gle/duUUQzUYXDcGCZ8M7" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 2. 넷마블 -->
+                    <!-- 2. 넷마블 (오픈 예정) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -198,10 +198,10 @@
                             <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 3. 한미약품 -->
+                    <!-- 3. 한미약품 (오픈 예정) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -210,10 +210,10 @@
                             <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 4. 펄어비스 -->
+                    <!-- 4. 펄어비스 (오픈 예정) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -222,10 +222,10 @@
                             <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 5. 프레디저 진로설계 -->
+                    <!-- 5. 프레디저 진로설계 (오픈 예정) -->
                     <div class="bg-orange-50/80 rounded-[2.5rem] p-6 border-2 border-orange-200 shadow-sm">
                         <h3 class="text-lg font-black text-orange-600 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
                         <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
@@ -233,7 +233,7 @@
                             <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
                         </div>
-                        <button onclick="openPopup()" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">오픈 예정</button>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">오픈 예정</button>
                     </div>
                 </div>
             </div>
@@ -258,13 +258,13 @@
                         청년ON라운지의 현장과 후기를 한눈에!✨
                     </p>
                     
-                    <!-- 웹진 액션 버튼 -->
+                    <!-- 웹진 액션 버튼 (콘텐츠 공개 예정 알림) -->
                     <div class="grid grid-cols-2 gap-3 mb-8">
-                        <button onclick="openPopup()" class="py-4 bg-pink-500 text-white rounded-2xl font-black text-sm shadow-lg shadow-pink-100 active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
+                        <button onclick="openPopup('content')" class="py-4 bg-pink-500 text-white rounded-2xl font-black text-sm shadow-lg shadow-pink-100 active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
                             <i class="fas fa-book-open"></i>
                             웹진 보러가기
                         </button>
-                        <button onclick="openPopup()" class="py-4 bg-white text-pink-500 border-2 border-pink-500 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
+                        <button onclick="openPopup('content')" class="py-4 bg-white text-pink-500 border-2 border-pink-500 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
                             <i class="fas fa-file-pdf"></i>
                             PDF 다운로드
                         </button>
@@ -427,8 +427,26 @@
     <script>
         const overlay = document.getElementById('popupOverlay');
         const box = document.getElementById('popupBox');
-        function openPopup() { overlay.style.display = 'block'; box.style.display = 'block'; }
-        function closePopup() { overlay.style.display = 'none'; box.style.display = 'none'; }
+        const messageEl = document.getElementById('popupMessage');
+
+        /**
+         * 팝업 열기
+         * @param {string} type - 'open' (추후 오픈 예정) 또는 'content' (추후 공개 예정)
+         */
+        function openPopup(type) { 
+            if (type === 'open') {
+                messageEl.innerHTML = '해당 프로그램은<br><b class="text-blue-600">추후 오픈 예정</b>입니다.';
+            } else {
+                messageEl.innerHTML = '해당 콘텐츠는<br><b class="text-blue-600">추후 공개 예정</b>입니다.';
+            }
+            overlay.style.display = 'block'; 
+            box.style.display = 'block'; 
+        }
+
+        function closePopup() { 
+            overlay.style.display = 'none'; 
+            box.style.display = 'none'; 
+        }
     </script>
 </body>
 </html>
