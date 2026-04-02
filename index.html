@@ -22,7 +22,6 @@
             overflow: hidden;
         }
 
-        /* 물결 패턴 레이어 */
         .wave-container {
             position: absolute;
             bottom: 0;
@@ -45,7 +44,7 @@
 
         .wide-tracking { letter-spacing: 0.15em; }
 
-        /* 전구 로고 반짝임 애니메이션 효과 */
+        /* 전구 로고 애니메이션 */
         .lightbulb-o {
             color: #fde047;
             display: inline-flex;
@@ -58,7 +57,55 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 라인업 섹션 반짝이는 효과 (Shimmer & Sparkle) */
+        /* 웹진 섹션 - 세련된 네온 글로우 효과 */
+        .celebrate-card {
+            position: relative;
+            background: white;
+            border: 2px solid #ff4da6;
+            box-shadow: 0 0 15px rgba(255, 77, 166, 0.4);
+            animation: neon-glow 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes neon-glow {
+            from {
+                box-shadow: 0 0 10px rgba(255, 77, 166, 0.3), 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+                border-color: #ff4da6;
+            }
+            to {
+                box-shadow: 0 0 25px rgba(255, 77, 166, 0.6), 0 10px 40px -5px rgba(244, 114, 182, 0.2);
+                border-color: #ff0080;
+            }
+        }
+
+        /* 반짝이는 별 효과 */
+        .sparkle-star {
+            position: absolute;
+            pointer-events: none;
+            font-size: 10px;
+            animation: star-blink 2.5s infinite;
+        }
+
+        @keyframes star-blink {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 0.8; transform: scale(1); }
+        }
+
+        /* 은은한 폭죽 효과 */
+        .firework {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            animation: explode 3s ease-out infinite;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { opacity: 0.2; }
+            100% { transform: scale(15); opacity: 0; }
+        }
+
+        /* 라인업 섹션 반짝임 */
         .lineup-card {
             position: relative;
             overflow: hidden;
@@ -73,31 +120,14 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(
-                45deg,
-                transparent 45%,
-                rgba(56, 189, 248, 0.05) 50%,
-                transparent 55%
-            );
+            background: linear-gradient(45deg, transparent 45%, rgba(56, 189, 248, 0.05) 50%, transparent 55%);
             animation: shimmer-sweep 4s infinite linear;
             pointer-events: none;
         }
 
         @keyframes shimmer-sweep {
-            0% { transform: translate(-30%, -30%) rotate(0deg); }
-            100% { transform: translate(10%, 10%) rotate(0deg); }
-        }
-
-        .sparkle-text {
-            background: linear-gradient(90deg, #0ea5e9, #38bdf8, #0ea5e9);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: text-shine 3s linear infinite;
-        }
-
-        @keyframes text-shine {
-            to { background-position: 200% center; }
+            0% { transform: translate(-30%, -30%); }
+            100% { transform: translate(10%, 10%); }
         }
 
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
@@ -129,7 +159,7 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 커스텀 팝업 (동적 텍스트 적용 가능하게 id 부여) -->
+    <!-- 커스텀 팝업 -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
         <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
@@ -166,114 +196,47 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 행사 & 프로그램 라인업 섹션 -->
-        <section class="mb-14">
-            <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
-                <div class="mb-10 text-center relative z-10">
-                    <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
-                    <h2 class="text-3xl font-black sparkle-text mb-2 leading-tight drop-shadow-sm">행사&프로그램 라인업</h2>
-                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
-                </div>
-                
-                <div class="space-y-8 relative z-10">
-                    <!-- 1. 근로복지공단 -->
-                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
-                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
-                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-black text-blue-600 mb-4">&lt;근로복지공단 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 3. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <a href="https://forms.gle/duUUQzUYXDcGCZ8M7" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- 2. 넷마블 (신청 활성화됨) -->
-                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
-                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
-                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-black text-blue-600 mb-4">&lt;넷마블 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- 3. 한미약품 (오픈 예정) -->
-                    <div class="px-2 border-l-4 border-sky-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;한미약품 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
-                            <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
-                    </div>
-
-                    <!-- 4. 펄어비스 (오픈 예정) -->
-                    <div class="px-2 border-l-4 border-sky-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;펄어비스 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
-                            <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
-                    </div>
-
-                    <!-- 5. 프레디저 진로설계 (오픈 예정) -->
-                    <div class="bg-orange-50/80 rounded-[2.5rem] p-6 border-2 border-orange-200 shadow-sm">
-                        <h3 class="text-lg font-black text-orange-600 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
-                        <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">오픈 예정</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (2) 청년ON웹진 -->
+        <!-- (1) 청년ON-AIR (웹진 섹션) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
                 청년ON웹진
             </h2>
-            <div class="bg-white rounded-[2.5rem] p-8 card-shadow border-2 border-slate-200 relative overflow-hidden group text-center">
-                <div class="absolute -right-4 -top-4 w-24 h-24 bg-pink-50 rounded-full opacity-50"></div>
+            <div class="celebrate-card rounded-[2.5rem] p-8 card-shadow relative overflow-hidden group text-center">
+                <!-- 은은한 장식 요소 -->
+                <div class="firework bg-pink-300" style="top: 15%; left: 10%; animation-delay: 0.2s;"></div>
+                <div class="firework bg-purple-200" style="top: 10%; right: 20%; animation-delay: 1.5s;"></div>
+                <div class="sparkle-star text-yellow-300" style="top: 12%; right: 12%;"><i class="fas fa-star"></i></div>
+                <div class="sparkle-star text-pink-300" style="bottom: 15%; left: 8%; animation-delay: 0.7s;"><i class="fas fa-star"></i></div>
                 
                 <div class="relative z-10">
+                    <!-- 발간 기념 배지 -->
+                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-pink-100 animate-bounce">
+                        축! 첫 발간 🎉
+                    </div>
+
                     <div class="relative w-32 h-32 mx-auto mb-4">
                         <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md">
                     </div>
                     
-                    <h3 class="text-lg font-black text-slate-800 mb-1">청년ON웹진</h3>
+                    <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
                     <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
-                        청년ON라운지의 현장과 후기를 한눈에!✨
+                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!🌟
                     </p>
                     
-                    <!-- 웹진 액션 버튼 (콘텐츠 공개 예정 알림) -->
                     <div class="grid grid-cols-2 gap-3 mb-8">
-                        <button onclick="openPopup('content')" class="py-4 bg-pink-500 text-white rounded-2xl font-black text-sm shadow-lg shadow-pink-100 active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
+                        <a href="https://on-air3-4.netlify.app/" target="_blank" class="py-4 bg-pink-500 text-white rounded-2xl font-black text-sm shadow-lg shadow-pink-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
                             <i class="fas fa-book-open"></i>
                             웹진 보러가기
-                        </button>
-                        <button onclick="openPopup('content')" class="py-4 bg-white text-pink-500 border-2 border-pink-500 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1yiTRk9DRIRi29vOrNlXyQxjRLHEFqth6/view?usp=drive_link" target="_blank" class="py-4 bg-white text-pink-500 border-2 border-pink-500 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-1">
                             <i class="fas fa-file-pdf"></i>
                             PDF 다운로드
-                        </button>
+                        </a>
                     </div>
 
-                    <!-- 아카이브 페이지 연결 -->
-                    <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200">
-                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-3">Webzine Archive Page</p>
+                    <div class="bg-pink-50/50 backdrop-blur-sm rounded-2xl p-5 border border-pink-100">
+                        <p class="text-[10px] font-black text-pink-400 uppercase tracking-widest mb-3">Webzine Archive Page</p>
                         <div class="flex flex-col gap-2">
                             <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-pink-300 group transition-all">
                                 <div class="flex items-center gap-3">
@@ -290,6 +253,79 @@
                                 <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                             </a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (2) 일정 섹션 -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
+                <span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>
+                일정
+            </h2>
+            <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
+                <div class="mb-10 text-center relative z-10">
+                    <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
+                    <h2 class="text-3xl font-black sparkle-text mb-2 leading-tight drop-shadow-sm">행사&프로그램 라인업</h2>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
+                </div>
+                
+                <div class="space-y-8 relative z-10">
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-black text-blue-600 mb-4">&lt;근로복지공단 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 3. (금) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <a href="https://forms.gle/duUUQzUYXDcGCZ8M7" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-black text-blue-600 mb-4">&lt;넷마블 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <div class="px-2 border-l-4 border-sky-300">
+                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;한미약품 편&gt;</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
+                            <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                    </div>
+
+                    <div class="px-2 border-l-4 border-sky-300">
+                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;펄어비스 편&gt;</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
+                            <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                    </div>
+
+                    <div class="bg-orange-50/80 rounded-[2.5rem] p-6 border-2 border-orange-200 shadow-sm">
+                        <h3 class="text-lg font-black text-orange-600 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
+                        <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
+                        </div>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">오픈 예정</button>
                     </div>
                 </div>
             </div>
@@ -430,10 +466,6 @@
         const box = document.getElementById('popupBox');
         const messageEl = document.getElementById('popupMessage');
 
-        /**
-         * 팝업 열기
-         * @param {string} type - 'open' (추후 오픈 예정) 또는 'content' (추후 공개 예정)
-         */
         function openPopup(type) { 
             if (type === 'open') {
                 messageEl.innerHTML = '해당 프로그램은<br><b class="text-blue-600">추후 오픈 예정</b>입니다.';
