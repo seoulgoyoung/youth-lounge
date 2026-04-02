@@ -34,7 +34,7 @@
             position: relative; display: block; width: calc(150% + 1.3px); height: 80px;
         }
 
-        /* 하단 푸터 - 아치형 단색 블루 배경 */
+        /* 하단 푸터 */
         .footer-arch {
             background-color: #0ea5e9;
             border-top-left-radius: 100px;
@@ -57,7 +57,7 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 웹진 섹션 - 세련된 네온 글로우 효과 */
+        /* 웹진 섹션 - 네온 글로우 효과 */
         .celebrate-card {
             position: relative;
             background: white;
@@ -77,35 +77,45 @@
             }
         }
 
+        /* 강화된 폭죽 애니메이션 */
+        .firework-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .firework {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            animation: burst 2.5s ease-out infinite;
+            opacity: 0;
+        }
+
+        @keyframes burst {
+            0% { transform: scale(0); opacity: 0; }
+            10% { opacity: 1; }
+            40% { opacity: 0.8; }
+            100% { transform: scale(35); opacity: 0; }
+        }
+
         /* 반짝이는 별 효과 */
         .sparkle-star {
             position: absolute;
             pointer-events: none;
-            font-size: 10px;
-            animation: star-blink 2.5s infinite;
+            font-size: 12px;
+            animation: star-blink 2s infinite;
+            z-index: 1;
         }
 
         @keyframes star-blink {
-            0%, 100% { opacity: 0; transform: scale(0.5); }
-            50% { opacity: 0.8; transform: scale(1); }
+            0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
         }
 
-        /* 은은한 폭죽 효과 */
-        .firework {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            animation: explode 3s ease-out infinite;
-        }
-
-        @keyframes explode {
-            0% { transform: scale(1); opacity: 0.5; }
-            50% { opacity: 0.2; }
-            100% { transform: scale(15); opacity: 0; }
-        }
-
-        /* 라인업 섹션 반짝임 */
         .lineup-card {
             position: relative;
             overflow: hidden;
@@ -162,7 +172,7 @@
     <!-- 커스텀 팝업 -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
-        <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
+        <div id="popupIcon" class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100">
             <i class="fas fa-info-circle text-2xl"></i>
         </div>
         <h3 class="text-xl font-bold mb-3 text-slate-900">알림</h3>
@@ -196,21 +206,26 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 청년ON-AIR (웹진 섹션) - 이모지 교체됨 -->
+        <!-- (1) 청년ON-AIR (웹진 섹션) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
                 청년ON웹진
             </h2>
             <div class="celebrate-card rounded-[2.5rem] p-8 card-shadow relative overflow-hidden group text-center">
-                <!-- 은은한 장식 요소 -->
-                <div class="firework bg-pink-300" style="top: 15%; left: 10%; animation-delay: 0.2s;"></div>
-                <div class="firework bg-purple-200" style="top: 10%; right: 20%; animation-delay: 1.5s;"></div>
-                <div class="sparkle-star text-yellow-300" style="top: 12%; right: 12%;"><i class="fas fa-star"></i></div>
-                <div class="sparkle-star text-pink-300" style="bottom: 15%; left: 8%; animation-delay: 0.7s;"><i class="fas fa-star"></i></div>
+                <!-- 강화된 폭죽 및 별 레이어 -->
+                <div class="firework-container">
+                    <div class="firework bg-pink-400 shadow-[0_0_8px_#f472b6]" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+                    <div class="firework bg-yellow-400 shadow-[0_0_8px_#facc15]" style="top: 15%; right: 15%; animation-delay: 0.8s;"></div>
+                    <div class="firework bg-blue-400 shadow-[0_0_8px_#60a5fa]" style="bottom: 25%; left: 10%; animation-delay: 1.5s;"></div>
+                    <div class="firework bg-purple-400 shadow-[0_0_8px_#c084fc]" style="bottom: 15%; right: 10%; animation-delay: 2.2s;"></div>
+                    
+                    <div class="sparkle-star text-yellow-400" style="top: 8%; right: 25%;"><i class="fas fa-star"></i></div>
+                    <div class="sparkle-star text-pink-400" style="bottom: 10%; left: 20%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
+                    <div class="sparkle-star text-sky-400" style="top: 30%; left: 8%; animation-delay: 1.2s;"><i class="fas fa-star"></i></div>
+                </div>
                 
                 <div class="relative z-10">
-                    <!-- 발간 기념 배지 - 이모지 수정 (축! 첫 발간 🎊✨) -->
                     <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-pink-100 animate-bounce">
                         축! 첫 발간 🎊✨
                     </div>
@@ -272,6 +287,7 @@
                 </div>
                 
                 <div class="space-y-8 relative z-10">
+                    <!-- 근로복지공단 -->
                     <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -284,6 +300,7 @@
                         <a href="https://forms.gle/duUUQzUYXDcGCZ8M7" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
+                    <!-- 넷마블 -->
                     <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -296,6 +313,7 @@
                         <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
+                    <!-- 한미약품 -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -307,6 +325,7 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
+                    <!-- 펄어비스 -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -318,14 +337,15 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <div class="bg-orange-50/80 rounded-[2.5rem] p-6 border-2 border-orange-200 shadow-sm">
-                        <h3 class="text-lg font-black text-orange-600 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
-                        <p class="text-[11px] text-orange-700 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                    <!-- 프레디저 진로설계 (모집 마감) -->
+                    <div class="bg-slate-50 rounded-[2.5rem] p-6 border-2 border-slate-200 shadow-sm opacity-80">
+                        <h3 class="text-lg font-black text-slate-500 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
+                        <p class="text-[11px] text-slate-400 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-6 font-medium">
                             <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
                         </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-orange-500 text-white rounded-xl font-bold active:scale-95 transition-all border-2 border-orange-600/20">오픈 예정</button>
+                        <button onclick="openPopup('closed')" class="w-full py-3 bg-slate-400 text-white rounded-xl font-bold active:scale-95 transition-all">모집 마감</button>
                     </div>
                 </div>
             </div>
@@ -465,12 +485,18 @@
         const overlay = document.getElementById('popupOverlay');
         const box = document.getElementById('popupBox');
         const messageEl = document.getElementById('popupMessage');
+        const iconEl = document.getElementById('popupIcon');
 
         function openPopup(type) { 
             if (type === 'open') {
                 messageEl.innerHTML = '해당 프로그램은<br><b class="text-blue-600">추후 오픈 예정</b>입니다.';
+                iconEl.className = "w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100";
+            } else if (type === 'closed') {
+                messageEl.innerHTML = '해당 프로그램은<br><b class="text-red-600">모집 마감</b>되었습니다.';
+                iconEl.className = "w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-red-100";
             } else {
                 messageEl.innerHTML = '해당 콘텐츠는<br><b class="text-blue-600">추후 공개 예정</b>입니다.';
+                iconEl.className = "w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-blue-100";
             }
             overlay.style.display = 'block'; 
             box.style.display = 'block'; 
@@ -483,3 +509,4 @@
     </script>
 </body>
 </html>
+
