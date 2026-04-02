@@ -15,7 +15,7 @@
             word-break: keep-all;
         }
 
-        /* 히어로 섹션 물결 배경 */
+        /* 히어로 섹션 */
         .hero-section {
             background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
             position: relative;
@@ -34,7 +34,7 @@
             position: relative; display: block; width: calc(150% + 1.3px); height: 80px;
         }
 
-        /* 하단 푸터 */
+        /* 푸터 */
         .footer-arch {
             background-color: #0ea5e9;
             border-top-left-radius: 100px;
@@ -44,7 +44,7 @@
 
         .wide-tracking { letter-spacing: 0.15em; }
 
-        /* 전구 로고 애니메이션 */
+        /* 전구 애니메이션 */
         .lightbulb-o {
             color: #fde047;
             display: inline-flex;
@@ -57,27 +57,25 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 웹진 섹션 - 네온 글로우 효과 */
+        /* 웹진 섹션 - 은은한 네온 글로우 */
         .celebrate-card {
             position: relative;
             background: white;
             border: 2px solid #ff4da6;
-            box-shadow: 0 0 15px rgba(255, 77, 166, 0.4);
-            animation: neon-glow 3s infinite alternate ease-in-out;
+            box-shadow: 0 0 10px rgba(255, 77, 166, 0.3);
+            animation: neon-glow 4s infinite alternate ease-in-out;
         }
 
         @keyframes neon-glow {
             from {
-                box-shadow: 0 0 10px rgba(255, 77, 166, 0.3), 0 10px 30px -5px rgba(0, 0, 0, 0.05);
-                border-color: #ff4da6;
+                box-shadow: 0 0 5px rgba(255, 77, 166, 0.2), 0 10px 30px -5px rgba(0, 0, 0, 0.05);
             }
             to {
-                box-shadow: 0 0 25px rgba(255, 77, 166, 0.6), 0 10px 40px -5px rgba(244, 114, 182, 0.2);
-                border-color: #ff0080;
+                box-shadow: 0 0 15px rgba(255, 77, 166, 0.4), 0 10px 40px -5px rgba(244, 114, 182, 0.15);
             }
         }
 
-        /* 강화된 폭죽 애니메이션 */
+        /* 최적화된 폭죽 애니메이션 */
         .firework-container {
             position: absolute;
             inset: 0;
@@ -88,32 +86,31 @@
 
         .firework {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
             border-radius: 50%;
-            animation: burst 2.5s ease-out infinite;
+            animation: burst-subtle 3s ease-out infinite;
             opacity: 0;
         }
 
-        @keyframes burst {
+        @keyframes burst-subtle {
             0% { transform: scale(0); opacity: 0; }
-            10% { opacity: 1; }
-            40% { opacity: 0.8; }
-            100% { transform: scale(35); opacity: 0; }
+            10% { opacity: 0.6; }
+            100% { transform: scale(20); opacity: 0; }
         }
 
-        /* 반짝이는 별 효과 */
+        /* 별 반짝임 */
         .sparkle-star {
             position: absolute;
             pointer-events: none;
-            font-size: 12px;
-            animation: star-blink 2s infinite;
+            font-size: 10px;
+            animation: star-blink 3s infinite;
             z-index: 1;
         }
 
         @keyframes star-blink {
-            0%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
-            50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 0.7; transform: scale(1); }
         }
 
         .lineup-card {
@@ -121,23 +118,6 @@
             overflow: hidden;
             background: white;
             border: 2px solid #e2e8f0;
-        }
-
-        .lineup-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 45%, rgba(56, 189, 248, 0.05) 50%, transparent 55%);
-            animation: shimmer-sweep 4s infinite linear;
-            pointer-events: none;
-        }
-
-        @keyframes shimmer-sweep {
-            0% { transform: translate(-30%, -30%); }
-            100% { transform: translate(10%, 10%); }
         }
 
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
@@ -176,7 +156,7 @@
             <i class="fas fa-info-circle text-2xl"></i>
         </div>
         <h3 class="text-xl font-bold mb-3 text-slate-900">알림</h3>
-        <p id="popupMessage" class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">해당 콘텐츠는<br><b class="text-blue-600">추후 공개 예정</b>입니다.</p>
+        <p id="popupMessage" class="text-slate-500 mb-8 font-medium leading-relaxed text-sm">추후 공개 예정입니다.</p>
         <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg shadow-sky-100">확인</button>
     </div>
 
@@ -206,23 +186,19 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 청년ON-AIR (웹진 섹션) -->
+        <!-- (1) 청년ON-AIR (웹진 섹션) - 애니메이션 완화 및 하단 장식 제거 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
                 청년ON웹진
             </h2>
             <div class="celebrate-card rounded-[2.5rem] p-8 card-shadow relative overflow-hidden group text-center">
-                <!-- 강화된 폭죽 및 별 레이어 -->
+                <!-- 약해진 애니메이션 입자 -->
                 <div class="firework-container">
-                    <div class="firework bg-pink-400 shadow-[0_0_8px_#f472b6]" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
-                    <div class="firework bg-yellow-400 shadow-[0_0_8px_#facc15]" style="top: 15%; right: 15%; animation-delay: 0.8s;"></div>
-                    <div class="firework bg-blue-400 shadow-[0_0_8px_#60a5fa]" style="bottom: 25%; left: 10%; animation-delay: 1.5s;"></div>
-                    <div class="firework bg-purple-400 shadow-[0_0_8px_#c084fc]" style="bottom: 15%; right: 10%; animation-delay: 2.2s;"></div>
-                    
-                    <div class="sparkle-star text-yellow-400" style="top: 8%; right: 25%;"><i class="fas fa-star"></i></div>
-                    <div class="sparkle-star text-pink-400" style="bottom: 10%; left: 20%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
-                    <div class="sparkle-star text-sky-400" style="top: 30%; left: 8%; animation-delay: 1.2s;"><i class="fas fa-star"></i></div>
+                    <div class="firework bg-pink-300" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
+                    <div class="firework bg-yellow-300" style="top: 10%; right: 25%; animation-delay: 1s;"></div>
+                    <div class="sparkle-star text-yellow-300" style="top: 8%; right: 15%;"><i class="fas fa-star"></i></div>
+                    <div class="sparkle-star text-pink-300" style="top: 20%; left: 10%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
                 </div>
                 
                 <div class="relative z-10">
@@ -287,7 +263,6 @@
                 </div>
                 
                 <div class="space-y-8 relative z-10">
-                    <!-- 근로복지공단 -->
                     <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -300,7 +275,6 @@
                         <a href="https://forms.gle/duUUQzUYXDcGCZ8M7" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 넷마블 -->
                     <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
                         <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
                         <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
@@ -313,7 +287,6 @@
                         <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 한미약품 -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -325,7 +298,6 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 펄어비스 -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -337,7 +309,6 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 프레디저 진로설계 (모집 마감) -->
                     <div class="bg-slate-50 rounded-[2.5rem] p-6 border-2 border-slate-200 shadow-sm opacity-80">
                         <h3 class="text-lg font-black text-slate-500 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
                         <p class="text-[11px] text-slate-400 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
@@ -351,7 +322,7 @@
             </div>
         </section>
 
-        <!-- (3) 상담 & 컨설팅 예약 -->
+        <!-- 상담 예약 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900"><span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>상담 & 컨설팅 예약</h2>
             <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200">
@@ -360,79 +331,11 @@
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">1:1 취업 컨설팅</h4><p class="text-[10px] text-slate-400 font-medium">개인별 맞춤 심층 진로/이력서/면접 컨설팅</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                     </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6602299" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
-                        <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">주거복지상담</h4><p class="text-[10px] text-slate-400 font-medium">매월 2,3,4주 수요일 | 공공임대 및 1인가구 서비스</p></div>
-                        <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
-                    </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7155040" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
-                        <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">금융/재무설계 상담</h4><p class="text-[10px] text-slate-400 font-medium text-wrap">매주 화요일 | 자산·부채 관리 및 신용·금융 일반 상담</p></div>
-                        <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
-                    </a>
-                    <a href="https://m.worldjob.or.kr/visitcounselNew/visitcounselCalendarList.do?menuId=1000006348" target="_blank" class="flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all group">
-                        <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">해외취업 상담</h4><p class="text-[10px] text-slate-400 font-medium">격주 목, 금 | 월드잡플러스 연계</p></div>
-                        <i class="fas fa-arrow-right text-slate-200 group-hover:text-sky-400"></i>
-                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- (4) 시설 예약 -->
-        <section class="mb-14 px-1">
-            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900"><span class="w-1.5 h-6 bg-emerald-500 rounded-full"></span>시설 예약</h2>
-            <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200">
-                <div class="space-y-4">
-                    <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white card-shadow">
-                        <div class="flex items-center gap-4 mb-3">
-                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center border-2 border-emerald-200"><i class="fas fa-book-open text-xl"></i></div>
-                            <h4 class="font-bold text-slate-800 text-base">스터디룸 4,5,6</h4>
-                        </div>
-                        <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed">최대 6명 수용 가능한 최적의 스터디 공간입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6553048" target="_blank" class="flex justify-center items-center py-3 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all">예약하기</a>
-                    </div>
-                    <div class="p-5 rounded-2xl border-2 border-slate-200 bg-white card-shadow">
-                        <div class="flex items-center gap-4 mb-3">
-                            <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center border-2 border-indigo-200"><i class="fas fa-robot text-xl"></i></div>
-                            <h4 class="font-bold text-slate-800 text-base">AI면접실</h4>
-                        </div>
-                        <p class="text-[10px] text-slate-500 font-medium mb-4 leading-relaxed">인공지능 기반의 최신 면접 연습 시스템입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" class="flex justify-center items-center py-3 bg-indigo-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md">예약하기</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (5) 2026 대표 프로그램 -->
-        <section class="mb-14 px-1">
-            <div class="mb-8">
-                <h2 class="text-xl font-black flex items-center gap-2 text-sky-900"><i class="fas fa-layer-group text-sky-500"></i>2026 대표 프로그램</h2>
-                <p class="text-[11px] text-slate-400 font-bold ml-7 mt-1 italic">당신의 성장을 견인할 청년ON라운지만의 핵심 커리큘럼!✨</p>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-                <div class="bg-white rounded-[1.5rem] p-5 border-2 border-sky-100 card-shadow flex flex-col items-center text-center">
-                    <div class="w-10 h-10 bg-sky-50 text-sky-500 rounded-xl flex items-center justify-center mb-3 border border-sky-100 shadow-sm"><i class="fas fa-rocket text-lg"></i></div>
-                    <h3 class="text-[13px] font-black text-slate-800 leading-tight mb-2">커리어 스타트업</h3>
-                    <p class="text-[9px] text-slate-500 leading-relaxed font-medium">나만의 길을 찾는<br>특별한 진로 설계 프로그램<br><span class="text-sky-600 font-bold">“좋아하는 것을 해야 할까?<br>잘하는 것을 해야 할까?”</span></p>
-                </div>
-                <div class="bg-white rounded-[1.5rem] p-5 border-2 border-blue-100 card-shadow flex flex-col items-center text-center">
-                    <div class="w-10 h-10 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center mb-3 border border-blue-100 shadow-sm"><i class="fas fa-microphone-alt text-lg"></i></div>
-                    <h3 class="text-[13px] font-black text-slate-800 leading-tight mb-2">취업준비콘서트</h3>
-                    <p class="text-[9px] text-slate-500 leading-relaxed font-medium">청년ON라운지의 대표 프로그램<br>현직자가 전하는 생생한<br>직무&채용 토크</p>
-                </div>
-                <div class="bg-white rounded-[1.5rem] p-5 border-2 border-indigo-100 card-shadow flex flex-col items-center text-center">
-                    <div class="w-10 h-10 bg-indigo-50 text-indigo-500 rounded-xl flex items-center justify-center mb-3 border border-indigo-100 shadow-sm"><i class="fas fa-user-tie text-lg"></i></div>
-                    <h3 class="text-[13px] font-black text-slate-800 leading-tight mb-2">모의면접 DAY</h3>
-                    <p class="text-[9px] text-slate-500 leading-relaxed font-medium">실제 면접관과 함께하는<br>다대다 실전 면접</p>
-                </div>
-                <div class="bg-white rounded-[1.5rem] p-5 border-2 border-rose-100 card-shadow flex flex-col items-center text-center relative">
-                    <div class="absolute right-2 top-2 px-2 py-0.5 bg-rose-500 text-white text-[8px] font-black rounded-md shadow-sm animate-bounce">NEW</div>
-                    <div class="w-10 h-10 bg-rose-50 text-rose-500 rounded-xl flex items-center justify-center mb-3 border border-rose-100 shadow-sm"><i class="fas fa-star text-lg"></i></div>
-                    <h3 class="text-[13px] font-black text-slate-800 leading-tight mb-2">청년특화 프로그램</h3>
-                    <p class="text-[9px] text-slate-500 leading-relaxed font-medium">산업 현장 기반의<br>실전 직무 탐구 프로그램</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- (6) 찾아오시는 길 -->
+        <!-- 찾아오시는 길 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-slate-900"><i class="fas fa-map-marked-alt text-sky-500"></i>찾아오시는 길</h2>
             <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200 overflow-hidden">
@@ -442,30 +345,6 @@
                     <p class="text-[11px] text-slate-400 font-medium mb-6">서울특별시 중구 삼일대로 363 (서울지방고용노동청)</p>
                     <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-sm font-bold shadow-lg active:scale-95 transition-all"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- (7) 미디어 속 청년ON라운지 -->
-        <section class="mb-12 px-1">
-            <div class="mb-6 flex flex-col">
-                <h2 class="text-xl font-black flex items-center gap-2 text-sky-900"><i class="fab fa-youtube text-red-500"></i>미디어 속 청년ON라운지</h2>
-                <p class="text-[11px] text-slate-400 font-bold ml-7 mt-1 italic text-wrap">유튜브에서 소개된 청년ON라운지의 생생한 모습을 확인해 보세요!📺</p>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <a href="https://www.youtube.com/watch?v=8pNXvE5pb38" target="_blank" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all group">
-                    <div class="aspect-video w-full rounded-2xl overflow-hidden mb-3 relative">
-                        <img src="https://img.youtube.com/vi/8pNXvE5pb38/mqdefault.jpg" alt="EP.1 썸네일" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors"><i class="fas fa-play text-white text-2xl drop-shadow-md"></i></div>
-                    </div>
-                    <div class="px-1"><h4 class="text-[12px] font-black text-slate-800 leading-tight">취재 영상 EP.1</h4><p class="text-[9px] text-slate-400 mt-1">서울고용센터 구석구석 탐방</p></div>
-                </a>
-                <a href="https://www.youtube.com/watch?v=t9VuIGy1j1Q" target="_blank" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all group">
-                    <div class="aspect-video w-full rounded-2xl overflow-hidden mb-3 relative">
-                        <img src="https://img.youtube.com/vi/t9VuIGy1j1Q/mqdefault.jpg" alt="EP.2 썸네일" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors"><i class="fas fa-play text-white text-2xl drop-shadow-md"></i></div>
-                    </div>
-                    <div class="px-1"><h4 class="text-[12px] font-black text-slate-800 leading-tight">취재 영상 EP.2</h4><p class="text-[9px] text-slate-400 mt-1">꿀팁 가득! 행사&프로그램 탐방</p></div>
-                </a>
             </div>
         </section>
 
