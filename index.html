@@ -57,7 +57,7 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 웹진 섹션 - 은은한 네온 글로우 */
+        /* 웹진 섹션 - 네온 글로우 */
         .celebrate-card {
             position: relative;
             background: white;
@@ -71,7 +71,7 @@
             to { box-shadow: 0 0 15px rgba(255, 77, 166, 0.4), 0 10px 40px -5px rgba(244, 114, 182, 0.15); }
         }
 
-        /* 최적화된 폭죽 효과 */
+        /* 폭죽 효과 */
         .firework-container {
             position: absolute;
             inset: 0;
@@ -108,29 +108,12 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 라인업 카드 쉬머 효과 */
+        /* 라인업 카드 쉬머 */
         .lineup-card {
             position: relative;
             overflow: hidden;
             background: white;
             border: 2px solid #e2e8f0;
-        }
-
-        .lineup-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 45%, rgba(56, 189, 248, 0.05) 50%, transparent 55%);
-            animation: shimmer-sweep 4s infinite linear;
-            pointer-events: none;
-        }
-
-        @keyframes shimmer-sweep {
-            0% { transform: translate(-30%, -30%); }
-            100% { transform: translate(10%, 10%); }
         }
 
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
@@ -200,7 +183,84 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 청년ON-AIR (웹진 섹션) -->
+        <!-- (1) 일정 섹션 - 바 색상 하얀색으로 수정됨 -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
+                <span class="w-1.5 h-6 bg-white rounded-full shadow-sm"></span>
+                일정
+            </h2>
+            <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
+                <div class="mb-10 text-center relative z-10">
+                    <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
+                    <h2 class="text-3xl font-black text-sky-600 mb-2 leading-tight">행사&프로그램 라인업</h2>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
+                </div>
+                
+                <div class="space-y-8 relative z-10">
+                    <!-- 넷마블 (4.15 14:00) -->
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-black text-blue-600 mb-4">&lt;넷마블 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <!-- IT 직무 현직자 멘토링 (4.15 16:00) -->
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">IT 직무 현직자 멘토링</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-4 leading-relaxed text-wrap">IT 분야 산업 이해 및 직무 역량 멘토링(20명 선착순 모집)</p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 15. (수) 16:00</p>
+                            <p>📍 장소: 서울고용센터 1층 스터디룸</p>
+                        </div>
+                        <a href="https://naver.me/GArnF3bO" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <!-- 한미그룹 (4.17) -->
+                    <div class="px-2 border-l-4 border-sky-300">
+                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;한미그룹 편&gt;</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
+                            <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                    </div>
+
+                    <!-- 펄어비스 (4.22) -->
+                    <div class="px-2 border-l-4 border-sky-300">
+                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
+                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;펄어비스 편&gt;</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
+                            <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                    </div>
+
+                    <!-- 프레디저 진로설계 (모집 마감) -->
+                    <div class="bg-slate-50 rounded-[2.5rem] p-6 border-2 border-slate-200 shadow-sm opacity-80">
+                        <h3 class="text-lg font-black text-slate-500 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
+                        <p class="text-[11px] text-slate-400 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
+                        <div class="text-[11px] text-slate-400 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
+                        </div>
+                        <button onclick="openPopup('closed')" class="w-full py-3 bg-slate-400 text-white rounded-xl font-bold active:scale-95 transition-all">모집 마감</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (2) 청년ON-AIR (웹진 섹션) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
@@ -241,83 +301,6 @@
                                 <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                             </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (2) 일정 섹션 -->
-        <section class="mb-14 px-1">
-            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
-                <span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>
-                일정
-            </h2>
-            <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
-                <div class="mb-10 text-center relative z-10">
-                    <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
-                    <h2 class="text-3xl font-black text-sky-600 mb-2 leading-tight">행사&프로그램 라인업</h2>
-                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
-                </div>
-                
-                <div class="space-y-8 relative z-10">
-                    <!-- 1. 넷마블 (4.15 14:00) -->
-                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
-                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
-                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[11px] text-slate-500 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-black text-blue-600 mb-4">&lt;넷마블 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 15. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <a href="https://forms.gle/9UZrTJaRczA1G6X2A" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- 2. IT 직무 현직자 멘토링 (4.15 16:00) - 제목 수정됨 -->
-                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
-                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
-                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">IT 직무 현직자 멘토링</h3>
-                        <p class="text-[11px] text-slate-500 font-bold mb-4 leading-relaxed">IT 분야 산업 이해 및 직무 역량 멘토링(20명 선착순 모집)</p>
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 15. (수) 16:00</p>
-                            <p>📍 장소: 서울고용센터 1층 스터디룸</p>
-                        </div>
-                        <a href="https://naver.me/GArnF3bO" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg shadow-sky-200 active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- 3. 한미그룹 (4.17) -->
-                    <div class="px-2 border-l-4 border-sky-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;한미그룹 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
-                            <p>📅 일정: 2026. 4. 17. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
-                    </div>
-
-                    <!-- 4. 펄어비스 (4.22) -->
-                    <div class="px-2 border-l-4 border-sky-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-400 mb-3 text-sm">&lt;펄어비스 편&gt;</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-4">
-                            <p>📅 일정: 2026. 4. 22. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
-                    </div>
-
-                    <!-- 5. 프레디저 진로설계 (4.24) -->
-                    <div class="bg-slate-50 rounded-[2.5rem] p-6 border-2 border-slate-200 shadow-sm opacity-80">
-                        <h3 class="text-lg font-black text-slate-500 mb-1">커리어스타트업 &lt;프레디저 진로설계&gt;</h3>
-                        <p class="text-[11px] text-slate-400 mb-4 font-bold leading-relaxed">"좋아하는 일"과 "잘하는 일" 사이에서 고민하는 당신을 위한 진로설계 프로그램</p>
-                        <div class="text-[11px] text-slate-400 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 4. 24. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년프로그램실</p>
-                        </div>
-                        <button onclick="openPopup('closed')" class="w-full py-3 bg-slate-400 text-white rounded-xl font-bold active:scale-95 transition-all">모집 마감</button>
                     </div>
                 </div>
             </div>
