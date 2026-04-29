@@ -108,22 +108,22 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 청년 마음 톡 콘서트 - 강조 카드 */
+        /* 청년 마음 톡 콘서트 - 강조 효과 강화 버전 */
         .refined-highlight-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f8fdff 100%);
-            border: 2px solid #bae6fd;
-            box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.1);
+            background: linear-gradient(145deg, #ffffff 0%, #f0faff 100%);
+            border: 2px solid #0ea5e9; /* 더 진한 파란색으로 변경 */
+            box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.2);
             animation: soft-glow-pulse 4s infinite ease-in-out;
         }
 
         @keyframes soft-glow-pulse {
             0%, 100% { 
-                border-color: #bae6fd; 
-                box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.08);
+                border-color: #0ea5e9; 
+                box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.15);
             }
             50% { 
-                border-color: #7dd3fc; 
-                box-shadow: 0 15px 30px -5px rgba(14, 165, 233, 0.18);
+                border-color: #0284c7; 
+                box-shadow: 0 15px 35px -5px rgba(14, 165, 233, 0.25);
             }
         }
 
@@ -240,18 +240,18 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 3. 청년 마음 톡, 정책 픽 콘서트 (5.13) - 본 행사 텍스트 수정됨 -->
+                    <!-- 3. 청년 마음 톡, 정책 픽 콘서트 (5.13) - 강조 강화 및 링크 활성화 -->
                     <div class="refined-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <h3 class="font-black text-lg text-slate-900 leading-tight">
-                                <i class="fas fa-star text-yellow-400 text-[10px] mr-1.5 align-middle mb-0.5"></i>청년 마음 톡(Talk),<br>정책 픽(Pick) 콘서트
+                                <i class="fas fa-star text-yellow-400 text-[11px] mr-1.5 align-middle mb-0.5 shadow-sm"></i>청년 마음 톡(Talk),<br>정책 픽(Pick) 콘서트
                             </h3>
-                            <div class="px-2.5 py-1 bg-sky-100 text-sky-600 rounded-lg text-[9px] font-black tracking-tighter opacity-80 border border-sky-200">
-                                COMING SOON
+                            <div class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center opacity-90 shadow-md">
+                                <i class="fas fa-calendar-check text-[10px]"></i>
                             </div>
                         </div>
                         
-                        <div class="text-[11px] text-slate-600 font-bold mb-5 space-y-1.5 border-l-2 border-sky-200 pl-3">
+                        <div class="text-[11px] text-slate-600 font-bold mb-5 space-y-1.5 border-l-2 border-sky-500 pl-3">
                             <p class="text-sky-600 text-[10px] tracking-tight">- 1934 청년지원 프로젝트 -</p>
                             <p>(본 행사) 박웅현 작가 강연 <span class="font-medium text-slate-400">(14:00~15:40)</span></p>
                             <p>(부대 행사) 청년 "정책 픽" 스토어 <span class="font-medium text-slate-400">(13:00~17:00)</span></p>
@@ -261,7 +261,7 @@
                             <p>📅 일정: 2026. 5. 13. (수) 13:00~17:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                         </div>
-                        <button onclick="openPopup('open')" class="w-full py-4 bg-white text-sky-600 border-2 border-sky-200 rounded-2xl font-black text-sm active:scale-95 transition-all shadow-sm">오픈 예정</button>
+                        <a href="https://docs.google.com/forms/d/1ROav8ZHNKWutf77OBYhPUINFZ08O8p8xbED1h4AkfA4/viewform?edit_requested=true" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
                     <!-- 4. KAI(한국항공우주) (5.27) -->
