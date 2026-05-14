@@ -15,6 +15,7 @@
             word-break: keep-all;
         }
 
+        /* 히어로 섹션 */
         .hero-section {
             background: linear-gradient(180deg, #38bdf8 0%, #0ea5e9 100%);
             position: relative;
@@ -43,6 +44,7 @@
 
         .wide-tracking { letter-spacing: 0.15em; }
 
+        /* 전구 애니메이션 */
         .lightbulb-o {
             color: #fde047;
             display: inline-flex;
@@ -69,6 +71,7 @@
             to { box-shadow: 0 0 15px rgba(255, 77, 166, 0.4), 0 10px 40px -5px rgba(244, 114, 182, 0.15); }
         }
 
+        /* 폭죽 효과 */
         .firework-container {
             position: absolute;
             inset: 0;
@@ -105,25 +108,7 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 청년 마음 톡 콘서트 - 강조 효과 카드 */
-        .refined-highlight-card {
-            background: linear-gradient(145deg, #ffffff 0%, #f0faff 100%);
-            border: 2px solid #0ea5e9; 
-            box-shadow: 0 10px 30px -5px rgba(14, 165, 233, 0.2);
-            animation: soft-glow-pulse 4s infinite ease-in-out;
-        }
-
-        @keyframes soft-glow-pulse {
-            0%, 100% { 
-                border-color: #0ea5e9; 
-                box-shadow: 0 10px 20px -5px rgba(14, 165, 233, 0.15);
-            }
-            50% { 
-                border-color: #0284c7; 
-                box-shadow: 0 15px 35px -5px rgba(14, 165, 233, 0.25);
-            }
-        }
-
+        /* 라인업 카드 쉬머 효과 */
         .lineup-card {
             position: relative;
             overflow: hidden;
@@ -133,6 +118,7 @@
 
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1); }
 
+        /* 팝업 스타일 */
         .popup-overlay {
             display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); z-index: 1000;
         }
@@ -171,6 +157,7 @@
         <button onclick="closePopup()" class="w-full py-4 bg-sky-600 text-white rounded-2xl font-bold active:scale-95 transition-all shadow-lg shadow-sky-100">확인</button>
     </div>
 
+    <!-- Header Section -->
     <header class="hero-section text-white pt-16 pb-32 px-6 text-center">
         <div class="max-w-md mx-auto flex flex-col items-center relative z-10">
             <p class="text-[10px] font-bold bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full mb-4 uppercase tracking-[0.2em]">Start & Completion</p>
@@ -196,6 +183,7 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
+        <!-- (1) 일정 섹션 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-white rounded-full shadow-sm"></span>
@@ -208,8 +196,22 @@
                     <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
                 </div>
                 
-                <div class="space-y-6 relative z-10">
-                    <!-- 1. KAI(한국항공우주) (5.27) -->
+                <div class="space-y-8 relative z-10">
+                    <!-- 1. 현직자멘토링&커피챗 (5.20) - 신규 추가 -->
+                    <div class="bg-sky-50/80 backdrop-blur-sm rounded-[2.5rem] p-6 border-2 border-sky-200 relative overflow-hidden shadow-sm">
+                        <div class="absolute top-0 right-0 p-3"><i class="fas fa-check-circle text-sky-200 text-4xl"></i></div>
+                        <h3 class="font-bold text-lg mb-1 text-sky-900 leading-tight">현직자멘토링&커피챗</h3>
+                        <p class="text-[11px] text-slate-500 font-bold mb-4 leading-relaxed">
+                            '마케팅, 홍보광고, 영업' 직무이해를 위한<br>현직자와 함께하는 멘토링&커피챗
+                        </p>
+                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
+                            <p>📅 일정: 2026. 5. 20. (수) 16:00 - 18:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지 성장프로그램실</p>
+                        </div>
+                        <a href="https://naver.me/x3cqgPlL" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <!-- 2. KAI(한국항공우주) (5.27) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -221,7 +223,7 @@
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
 
-                    <!-- 2. 경험에서 진단-가치찾기 프로그램 (5.28) - 링크 활성화 -->
+                    <!-- 3. 경험에서 진단-가치찾기 프로그램 (5.28) -->
                     <div class="px-2 border-l-4 border-emerald-400">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">경험에서 진단-가치찾기 프로그램</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-4 leading-relaxed">
@@ -236,7 +238,7 @@
                         <a href="https://form.naver.com/response/g3hcPfs4ZaLo1OuUJ-kZgA" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 3. 모의면접DAY (5.29) -->
+                    <!-- 4. 모의면접DAY (5.29) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">모의면접DAY</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자 면접관과 함께하는 다대다 모의면접</p>
@@ -247,34 +249,11 @@
                         </div>
                         <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
                     </div>
-
-                    <!-- 4. 청년 마음 톡, 정책 픽 콘서트 (5.13) - 접수 마감 (현장 접수 가능) -->
-                    <div class="refined-highlight-card rounded-[2.5rem] p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <h3 class="font-black text-lg text-slate-900 leading-tight">
-                                <i class="fas fa-star text-yellow-400 text-[11px] mr-1.5 align-middle mb-0.5 shadow-sm"></i>청년 마음 톡(Talk),<br>정책 픽(Pick) 콘서트
-                            </h3>
-                            <div class="w-8 h-8 bg-sky-500 text-white rounded-full flex items-center justify-center opacity-90 shadow-md">
-                                <i class="fas fa-calendar-check text-[10px]"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="text-[11px] text-slate-600 font-bold mb-5 space-y-1.5 border-l-2 border-sky-500 pl-3">
-                            <p class="text-sky-600 text-[10px] tracking-tight">- 1934 청년지원 프로젝트 -</p>
-                            <p>(본 행사) 박웅현 작가 강연 <span class="font-medium text-slate-400">(14:00~15:40)</span></p>
-                            <p>(부대 행사) 청년 "정책 픽" 스토어 <span class="font-medium text-slate-400">(13:00~17:00)</span></p>
-                        </div>
-
-                        <div class="text-[11px] text-slate-500 space-y-1 mb-6 font-medium">
-                            <p>📅 일정: 2026. 5. 13. (수) 13:00~17:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                        </div>
-                        <button onclick="openPopup('closed')" class="block w-full py-4 bg-slate-400 text-white text-center rounded-2xl font-bold active:scale-95 transition-all">접수 마감 (현장 접수 가능)</button>
-                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- (2) 청년ON-AIR (웹진 섹션) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
@@ -320,6 +299,7 @@
             </div>
         </section>
 
+        <!-- 상담 & 컨설팅 예약 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900"><span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>상담 & 컨설팅 예약</h2>
             <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200">
@@ -405,7 +385,7 @@
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-slate-900"><i class="fas fa-map-marked-alt text-sky-500"></i>찾아오시는 길</h2>
             <div class="bg-white rounded-[2.5rem] p-6 card-shadow border-2 border-slate-200 overflow-hidden">
                 <div class="w-full h-52 mb-6"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.5186256247943!2d126.9859!3d37.5664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e8a6000001%3A0xc3991206dfd8d641!2z7ISc7Jq46rOg7Jqp67O17KeA7ZSM65-s7Iqk7IS87YSw!5e0!3m2!1sko!2skr!4v1710000000000" class="w-full h-full border-0 grayscale-[0.2]" allowfullscreen="" loading="lazy"></iframe></div>
-                <div class="text-center">
+                <div class="text-center pb-2">
                     <p class="font-black text-slate-800 text-base">서울고용복지플러스센터 1층</p>
                     <p class="text-[11px] text-slate-400 font-medium mb-6">서울특별시 중구 삼일대로 363 (서울지방고용노동청)</p>
                     <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-sm font-bold shadow-lg active:scale-95 transition-all"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
