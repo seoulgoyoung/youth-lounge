@@ -57,18 +57,18 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 웹진 섹션 - 은은한 네온 글로우 */
+        /* 웹진 섹션 - 은은한 네온 글로우 (파란색으로 변경) */
         .celebrate-card {
             position: relative;
             background: white;
-            border: 2px solid #ff4da6;
-            box-shadow: 0 0 10px rgba(255, 77, 166, 0.3);
+            border: 2px solid #0ea5e9;
+            box-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
             animation: neon-glow 4s infinite alternate ease-in-out;
         }
 
         @keyframes neon-glow {
-            from { box-shadow: 0 0 5px rgba(255, 77, 166, 0.2), 0 10px 30px -5px rgba(0, 0, 0, 0.05); }
-            to { box-shadow: 0 0 15px rgba(255, 77, 166, 0.4), 0 10px 40px -5px rgba(244, 114, 182, 0.15); }
+            from { box-shadow: 0 0 5px rgba(14, 165, 233, 0.2), 0 10px 30px -5px rgba(0, 0, 0, 0.05); }
+            to { box-shadow: 0 0 15px rgba(14, 165, 233, 0.4), 0 10px 40px -5px rgba(14, 165, 233, 0.15); }
         }
 
         /* 폭죽 효과 */
@@ -201,7 +201,61 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 일정 섹션 -->
+        <!-- (1) 청년ON-AIR (웹진 섹션 - 최상단으로 이동 및 파란색 테마 교체) -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
+                <span class="w-1.5 h-6 bg-sky-400 rounded-full"></span>
+                청년ON웹진
+            </h2>
+            <div class="celebrate-card rounded-[2.5rem] p-8 card-shadow relative overflow-hidden group text-center">
+                <div class="firework-container">
+                    <div class="firework bg-sky-300" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
+                    <div class="firework bg-yellow-300" style="top: 10%; right: 25%; animation-delay: 1s;"></div>
+                    <div class="sparkle-star text-yellow-300" style="top: 8%; right: 15%;"><i class="fas fa-star"></i></div>
+                    <div class="sparkle-star text-sky-300" style="bottom: 20%; left: 10%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-sky-100 animate-bounce">
+                        축! 5+6월호 발간! 🎊✨
+                    </div>
+                    <div class="relative w-32 h-32 mx-auto mb-4">
+                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md">
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
+                    <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
+                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" class="py-4 bg-sky-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-sky-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                            <i class="fas fa-book-open mb-1"></i>
+                            <span>웹진 보러가기</span>
+                            <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" class="py-4 bg-white text-sky-600 border-2 border-sky-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                            <i class="fas fa-file-pdf mb-1"></i>
+                            <span>PDF 보러가기</span>
+                            <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
+                        </a>
+                    </div>
+                    <div class="bg-sky-50/50 backdrop-blur-sm rounded-2xl p-5 border border-sky-100">
+                        <p class="text-[10px] font-black text-sky-500 uppercase tracking-widest mb-3">Webzine Archive Page</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-pink-300 group transition-all">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-pink-50 text-pink-500 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-xs font-bold text-slate-700">모바일 최적화 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-pink-400"></i>
+                            </a>
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-sky-300 group transition-all">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-sky-50 text-sky-500 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-xs font-bold text-slate-700">PC 와이드 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- (2) 일정 섹션 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-white rounded-full shadow-sm"></span>
@@ -265,7 +319,7 @@
                         <button onclick="openPopup('closed')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200 active:scale-95 transition-all">모집 마감</button>
                     </div>
 
-                    <!-- 4. 일경험 온라인 설명회 (6.02) - 신규 추가 및 정렬 -->
+                    <!-- 4. 일경험 온라인 설명회 (6.02) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <h3 class="font-black text-lg text-slate-900 leading-tight">일경험 온라인 설명회</h3>
@@ -283,52 +337,6 @@
                             <p>👤 대상: 15-34세 이하 졸업자, 취업준비중인 지역청년(졸업자 우대)</p>
                         </div>
                         <a href="https://naver.me/IGsZhpQa" target="_blank" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (2) 청년ON-AIR (웹진 섹션) -->
-        <section class="mb-14 px-1">
-            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
-                <span class="w-1.5 h-6 bg-pink-400 rounded-full"></span>
-                청년ON웹진
-            </h2>
-            <div class="celebrate-card rounded-[2.5rem] p-8 card-shadow relative overflow-hidden group text-center">
-                <div class="firework-container">
-                    <div class="firework bg-pink-300" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
-                    <div class="firework bg-yellow-300" style="top: 10%; right: 25%; animation-delay: 1s;"></div>
-                    <div class="sparkle-star text-yellow-300" style="top: 8%; right: 15%;"><i class="fas fa-star"></i></div>
-                    <div class="sparkle-star text-pink-300" style="bottom: 20%; left: 10%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
-                </div>
-                
-                <div class="relative z-10">
-                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-pink-100 animate-bounce">
-                        축! 첫 발간 🎊✨
-                    </div>
-                    <div class="relative w-32 h-32 mx-auto mb-4">
-                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md">
-                    </div>
-                    <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
-                    <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
-                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 mb-8">
-                        <a href="https://on-air3-4.netlify.app/" target="_blank" class="py-4 bg-pink-500 text-white rounded-2xl font-black text-sm shadow-lg shadow-pink-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-1"><i class="fas fa-book-open"></i>웹진 보러가기</a>
-                        <a href="https://drive.google.com/file/d/1yiTRk9DRIRi29vOrNlXyQxjRLHEFqth6/view?usp=drive_link" target="_blank" class="py-4 bg-white text-pink-500 border-2 border-pink-500 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-1"><i class="fas fa-file-pdf"></i>PDF 다운로드</a>
-                    </div>
-                    <div class="bg-pink-50/50 backdrop-blur-sm rounded-2xl p-5 border border-pink-100">
-                        <p class="text-[10px] font-black text-pink-400 uppercase tracking-widest mb-3">Webzine Archive Page</p>
-                        <div class="flex flex-col gap-2">
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-pink-300 group transition-all">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-pink-50 text-pink-500 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-xs font-bold text-slate-700">모바일 최적화 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-pink-400"></i>
-                            </a>
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-sky-300 group transition-all">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-sky-50 text-sky-500 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-xs font-bold text-slate-700">PC 와이드 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
