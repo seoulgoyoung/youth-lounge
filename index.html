@@ -108,7 +108,7 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 일정 카드 세련된 강조 (통일된 색상) */
+        /* 일정 카드 세련된 강조 */
         .event-highlight-card {
             background: linear-gradient(145deg, #ffffff 0%, #f0faff 100%);
             border: 2px solid #0ea5e9; 
@@ -289,22 +289,29 @@
                         <a href="https://naver.me/IGsZhpQa" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 2. 하나은행 편 (6.17) - 신규 추가 및 날짜별 정렬 -->
-                    <div class="px-2 border-l-4 border-sky-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-600 mb-3 text-sm">&lt;하나은행 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-4">
+                    <!-- 2. 하나은행 편 (6.17) - 활성화 및 강조 테두리 적용 -->
+                    <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                                <p class="text-[10px] text-sky-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                            </div>
+                            <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center opacity-70">
+                                <i class="fas fa-check text-[10px]"></i>
+                            </div>
+                        </div>
+                        <p class="font-bold text-slate-700 mb-4">&lt;하나은행 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
                             <p>📅 일정: 2026. 6. 17. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-1.5 rounded border border-sky-100/50 leading-normal">
+                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-2 rounded-xl border border-sky-100/50 leading-normal mt-2">
                                 📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
                             </p>
                         </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
+                        <a href="https://forms.gle/oMNmL223y9rm3KsD6" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- 3. LG CNS 편 (6.24) - 신규 추가 및 날짜별 정렬 -->
+                    <!-- 3. LG CNS 편 (6.24) -->
                     <div class="px-2 border-l-4 border-sky-300">
                         <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
                         <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
@@ -339,7 +346,7 @@
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">금융/재무설계 상담</h4><p class="text-[10px] text-slate-400 font-medium text-wrap">매주 화요일 | 자산·부채 관리 및 신용·금융 일반 상담</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
                     </a>
-                    <!-- 신규 추가된 '일경험 상담' 항목 -->
+                    <!-- 일경험 상담 항목 -->
                     <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7660201" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex justify-between items-center p-5 rounded-2xl border-2 border-slate-200 hover:bg-sky-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-sm mb-1">일경험 상담</h4><p class="text-[10px] text-slate-400 font-medium text-wrap">매주 화요일 | 미래내일 일경험지원사업 상세 안내</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-sky-400"></i>
