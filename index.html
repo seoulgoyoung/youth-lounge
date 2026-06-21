@@ -57,7 +57,7 @@
             100% { filter: drop-shadow(0 0 20px rgba(253, 224, 71, 1)); transform: scale(1.1); }
         }
 
-        /* 웹진 섹션 - 은은한 네온 글로우 */
+        /* 웹진 섹션 - 은은한 네온 글로우 (파란색) */
         .celebrate-card {
             position: relative;
             background: white;
@@ -108,7 +108,7 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 일정 카드 세련된 강조 */
+        /* 일정 카드 세련된 강조 (통일된 색상) */
         .event-highlight-card {
             background: linear-gradient(145deg, #ffffff 0%, #f0faff 100%);
             border: 2px solid #0ea5e9; 
@@ -142,7 +142,7 @@
         }
 
         .popup-content {
-            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1001;
+            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1010;
             animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -201,10 +201,10 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 일정 섹션 (최상단) -->
+        <!-- (1) 일정 섹션 (최상단으로 이동 완료) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
-                <span class="w-1.5 h-6 bg-sky-500 rounded-full shadow-sm"></span>
+                <span class="w-1.5 h-6 bg-white rounded-full shadow-sm"></span>
                 일정
             </h2>
             <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
@@ -276,24 +276,46 @@
                         <div class="flex items-start justify-between mb-3">
                             <div>
                                 <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-sky-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                                <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                             </div>
                             <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center opacity-70">
                                 <i class="fas fa-check text-[10px]"></i>
                             </div>
                         </div>
                         <p class="font-bold text-slate-700 mb-4">&lt;LG CNS 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
+                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-4">
                             <p>📅 일정: 2026. 6. 24. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-2 rounded-xl border border-sky-100/50 leading-normal mt-2">
+                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-1.5 rounded border border-sky-100/50 leading-normal">
                                 📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
                             </p>
                         </div>
                         <a href="https://forms.gle/7meW9aD9Vgvd9Lrb8" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 3] 커리어 스타트업 <3차> (7.3) -->
+                    <!-- [일정 3] 현대오토에버 편 (7.1) - 신규 신청 활성화 및 날짜 순 배치 변경 -->
+                    <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                                <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                            </div>
+                            <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center opacity-70">
+                                <i class="fas fa-check text-[10px]"></i>
+                            </div>
+                        </div>
+                        <p class="font-bold text-slate-600 mb-3 text-sm">&lt;현대오토에버 편&gt;</p>
+                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
+                            <p>📅 일정: 2026. 7. 1. (수) 14:00</p>
+                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
+                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-2 rounded-xl border border-sky-100/50 leading-normal mt-2">
+                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
+                            </p>
+                        </div>
+                        <a href="https://forms.gle/ooC9VD6eBijz2TH79" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
+                    </div>
+
+                    <!-- [일정 4] 커리어 스타트업 <3차> (7.3) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -315,7 +337,7 @@
                         <a href="https://naver.me/Fz8L8fwn" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 4] 청년 AI HOT 스쿨 (7.7 ~ 7.30) -->
+                    <!-- [일정 5] 청년 AI HOT 스쿨 (7.7 ~ 7.30) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -367,7 +389,7 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOoGHIPrz57H8ZRGeoTKbNVKm6IJg-3Izeg7meWKfUvMT2HQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 5] 올about군 페스타 (7.10) - 신규 추가 (현대오토에버 위에 정밀 배치) -->
+                    <!-- [일정 6] 올about군 페스타 (7.10) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -399,27 +421,12 @@
 
                         <a href="https://forms.gle/ee33UDYEaySgtJJq6" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
-
-                    <!-- [일정 6] 현대오토에버 편 (7.1) - 가장 아래 배치 및 오픈 예정 -->
-                    <div class="px-2 border-l-4 border-slate-300">
-                        <h3 class="font-bold text-slate-700 mb-1 text-sm">취업준비콘서트 일자리톡톡</h3>
-                        <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                        <p class="font-bold text-slate-600 mb-3 text-sm">&lt;현대오토에버 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-4">
-                            <p>📅 일정: 2026. 7. 1. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-1.5 rounded border border-sky-100/50 leading-normal">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <button onclick="openPopup('open')" class="w-full py-3 bg-slate-100 text-slate-400 rounded-xl font-bold text-xs border-2 border-slate-200">오픈 예정</button>
-                    </div>
                     
                 </div>
             </div>
         </section>
 
-        <!-- (2) 청년ON웹진 (두 번째 배치) -->
+        <!-- (2) 청년ON-AIR (웹진 섹션 - 두 번째로 하향 배치) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-sky-400 rounded-full"></span>
@@ -445,12 +452,12 @@
                         청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
                     </p>
                     <div class="grid grid-cols-2 gap-3 mb-8">
-                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-sky-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-sky-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-sky-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-sky-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 text-center">
                             <i class="fas fa-book-open mb-1"></i>
                             <span>웹진 보러가기</span>
                             <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
                         </a>
-                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-sky-600 border-2 border-sky-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-sky-600 border-2 border-sky-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 text-center">
                             <i class="fas fa-file-pdf mb-1"></i>
                             <span>PDF 보러가기</span>
                             <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
@@ -472,7 +479,7 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- (3) 상담 & 컨설팅 예약 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900"><span class="w-1.5 h-6 bg-sky-500 rounded-full"></span>상담 & 컨설팅 예약</h2>
