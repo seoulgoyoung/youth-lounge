@@ -108,7 +108,7 @@
             50% { opacity: 0.7; transform: scale(1); }
         }
 
-        /* 일정 카드 세련된 강조 (통일된 색상) */
+        /* 일정 카드 세련된 강조 */
         .event-highlight-card {
             background: linear-gradient(145deg, #ffffff 0%, #f0faff 100%);
             border: 2px solid #0ea5e9; 
@@ -142,7 +142,7 @@
         }
 
         .popup-content {
-            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1010;
+            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1001;
             animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -188,8 +188,9 @@
                     </svg>
                 </span><span class="text-[#fde047]">N</span> 라운지</span>
             </h1>
+            <!-- GoDragon 캐릭터 이미지 영역 (onerror 대체 경로 원상 복구 완료!) -->
             <div class="relative w-48 h-auto character-touch -mt-4">
-                <img src="4.png" alt="고드래곤" class="w-full drop-shadow-2xl">
+                <img src="4.png" alt="고드래곤" class="w-full drop-shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/180x180/38bdf8/ffffff?text=GoDragon';">
             </div>
         </div>
         <div class="wave-container">
@@ -201,10 +202,10 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-5 relative z-20">
         
-        <!-- (1) 일정 섹션 (최상단으로 이동 완료) -->
+        <!-- (1) 일정 섹션 (최상단 배치 고정) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
-                <span class="w-1.5 h-6 bg-white rounded-full shadow-sm"></span>
+                <span class="w-1.5 h-6 bg-sky-500 rounded-full shadow-sm"></span>
                 일정
             </h2>
             <div class="lineup-card rounded-[3rem] p-8 card-shadow border-2 border-slate-200">
@@ -216,62 +217,7 @@
                 
                 <div class="space-y-6 relative z-10">
                     
-                    <!-- [일정 1] 청년 와우(WOW)+AI스쿨 (6.10 ~ 6.25) -->
-                    <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <div>
-                                <span class="inline-block px-3 py-1 bg-yellow-400 text-slate-950 text-[9px] font-black rounded-full mb-2 tracking-wide">집중 특화 스쿨</span>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">청년 와우(WOW)+AI스쿨</h3>
-                                <p class="text-[10px] text-sky-600 font-bold mt-1">world of work+ AI: AI와 함께하는 새로운 직업의 세계</p>
-                            </div>
-                            <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center opacity-70">
-                                <i class="fas fa-check text-[10px]"></i>
-                            </div>
-                        </div>
-                        
-                        <div class="text-[11px] text-slate-600 space-y-1.5 mb-5 font-medium border-l-2 border-sky-300 pl-3">
-                            <p>📅 <b>운영 기간 :</b> 2026년 6월 집중 운영</p>
-                            <p>📍 <b>장 소 :</b> 서울고용복지+센터 1층 청년ON라운지 다목적홀</p>
-                            <p>👤 <b>대 상 :</b> 19세~34세 구직 청년 / 고용서비스 종사자 50명 내외</p>
-                        </div>
-
-                        <!-- 세부 교육 시간표 -->
-                        <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-sky-100 mb-6 space-y-2.5">
-                            <p class="text-[10px] font-black text-sky-700 flex items-center gap-1.5 border-b border-sky-100/60 pb-1.5 uppercase">
-                                <i class="fas fa-calendar-alt text-sky-500"></i> 세부 교육 시간표 (14:00 - 16:00)
-                            </p>
-                            <div class="space-y-2">
-                                <div class="flex items-start gap-2 text-[11px]">
-                                    <span class="bg-sky-50 text-sky-600 font-bold px-1.5 py-0.5 rounded text-[9px] shrink-0">1교시 | 6.10(수)</span>
-                                    <div class="leading-normal">
-                                        <p class="font-black text-slate-800">AI 기업의 직무 및 채용</p>
-                                        <p class="text-[9px] text-slate-400">Nota AI (김민용 이사)</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-2 text-[11px]">
-                                    <span class="bg-sky-50 text-sky-600 font-bold px-1.5 py-0.5 rounded text-[9px] shrink-0">2교시 | 6.18(목)</span>
-                                    <div class="leading-normal">
-                                        <p class="font-black text-slate-800">꼭 필요한 디지털 리터러시</p>
-                                        <p class="text-[9px] text-slate-400">(주)내일시스템 (박재만 대표)</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start gap-2 text-[11px]">
-                                    <span class="bg-sky-50 text-sky-600 font-bold px-1.5 py-0.5 rounded text-[9px] shrink-0">3교시 | 6.25(목)</span>
-                                    <div class="leading-normal">
-                                        <p class="font-black text-slate-800">취업의 완벽한 비서 AI</p>
-                                        <p class="text-[9px] text-slate-400">서울시립대 한정숙 컨설턴트</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="text-[9px] text-rose-500 font-bold mt-1 border-t border-dashed border-sky-100/50 pt-1.5 leading-tight">
-                                * 교육 참여자 대상 추후 참여 소감 사례 공모 (예정)
-                            </p>
-                        </div>
-
-                        <a href="https://naver.me/Fdqqa7EJ" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- [일정 2] LG CNS 편 (6.24) -->
+                    <!-- [일정 1] 현대오토에버 편 (7.1) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -282,29 +228,7 @@
                                 <i class="fas fa-check text-[10px]"></i>
                             </div>
                         </div>
-                        <p class="font-bold text-slate-700 mb-4">&lt;LG CNS 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-4">
-                            <p>📅 일정: 2026. 6. 24. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-sky-50/50 p-1.5 rounded border border-sky-100/50 leading-normal">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <a href="https://forms.gle/7meW9aD9Vgvd9Lrb8" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
-
-                    <!-- [일정 3] 현대오토에버 편 (7.1) - 신규 신청 활성화 및 날짜 순 배치 변경 -->
-                    <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <div>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-slate-400 font-bold mb-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                            </div>
-                            <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center opacity-70">
-                                <i class="fas fa-check text-[10px]"></i>
-                            </div>
-                        </div>
-                        <p class="font-bold text-slate-600 mb-3 text-sm">&lt;현대오토에버 편&gt;</p>
+                        <p class="font-bold text-slate-700 mb-4">&lt;현대오토에버 편&gt;</p>
                         <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
                             <p>📅 일정: 2026. 7. 1. (수) 14:00</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
@@ -315,7 +239,7 @@
                         <a href="https://forms.gle/ooC9VD6eBijz2TH79" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 4] 커리어 스타트업 <3차> (7.3) -->
+                    <!-- [일정 2] 커리어 스타트업 <3차> (7.3) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -337,7 +261,7 @@
                         <a href="https://naver.me/Fz8L8fwn" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 5] 청년 AI HOT 스쿨 (7.7 ~ 7.30) -->
+                    <!-- [일정 3] 청년 AI HOT 스쿨 (7.7 ~ 7.30) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -389,7 +313,7 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOoGHIPrz57H8ZRGeoTKbNVKm6IJg-3Izeg7meWKfUvMT2HQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-sky-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 6] 올about군 페스타 (7.10) -->
+                    <!-- [일정 4] 올about군 페스타 (7.10) -->
                     <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -406,7 +330,7 @@
                         <div class="text-[11px] text-slate-600 space-y-1.5 mb-5 font-medium border-l-2 border-sky-300 pl-3">
                             <p>📅 <b>일 정 :</b> 2026. 7. 10. (금) 14:00 - 18:00</p>
                             <p>📍 <b>장 소 :</b> 서울고용센터 1층 청년ON라운지</p>
-                            <p>👤 <b>대 상 :</b> 병역 및 군 진로설계에 관심 있는 청년(특성화고·대학생 등)</p>
+                            <p>👤 <b>대 사 :</b> 병역 및 군 진로설계에 관심 있는 청년(특성화고·대학생 등)</p>
                         </div>
 
                         <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-sky-100 mb-6 space-y-2.5">
@@ -426,7 +350,7 @@
             </div>
         </section>
 
-        <!-- (2) 청년ON-AIR (웹진 섹션 - 두 번째로 하향 배치) -->
+        <!-- (2) 청년ON-AIR (웹진 섹션 - 두 번째 배치 고정) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-sky-900">
                 <span class="w-1.5 h-6 bg-sky-400 rounded-full"></span>
@@ -444,20 +368,21 @@
                     <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-sky-500 to-blue-600 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-sky-100 animate-bounce">
                         축! 5+6월호 발간! 🎊✨
                     </div>
+                    <!-- 웹진 캐릭터 이미지 영역 (onerror 대체 경로 원상 복구 완료!) -->
                     <div class="relative w-32 h-32 mx-auto mb-4">
-                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md">
+                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/e0f2fe/0284c7?text=Webzine';">
                     </div>
                     <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
                     <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
                         청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
                     </p>
                     <div class="grid grid-cols-2 gap-3 mb-8">
-                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-sky-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-sky-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 text-center">
+                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-sky-600 text-white rounded-2xl font-black text-sm shadow-lg shadow-sky-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
                             <i class="fas fa-book-open mb-1"></i>
                             <span>웹진 보러가기</span>
                             <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
                         </a>
-                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-sky-600 border-2 border-sky-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 text-center">
+                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-sky-600 border-2 border-sky-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
                             <i class="fas fa-file-pdf mb-1"></i>
                             <span>PDF 보러가기</span>
                             <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
