@@ -190,7 +190,7 @@
                     </svg>
                 </span><span class="text-[#fde047]">N</span> 라운지</span>
             </h1>
-            <!-- GoDragon 캐릭터 이미지 영역 (그린 테마에 걸맞게 플레이스홀더 컬러 변경) -->
+            <!-- GoDragon 캐릭터 이미지 영역 -->
             <div class="relative w-48 h-auto character-touch -mt-4">
                 <img src="4.png" alt="고드래곤" class="w-full drop-shadow-2xl" onerror="this.onerror=null; this.src='https://placehold.co/180x180/10b981/ffffff?text=GoDragon';">
             </div>
@@ -202,23 +202,77 @@
         </div>
     </header>
 
-    <!-- px-2.5로 가로 여백을 줄여 모바일에서의 가로 활용폭을 대폭 향상 -->
+    <!-- px-2.5로 가로 여백을 줄여 모바일 가로 활용성 확보 -->
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
-        <!-- (1) 일정 섹션 (최상단 배치 고정) -->
+        <!-- (1) 청년ON-AIR (웹진 섹션 - 최상단 배치 고정) -->
+        <section class="mb-14 px-1">
+            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900">
+                <span class="w-1.5 h-6 bg-emerald-400 rounded-full"></span>
+                청년ON웹진
+            </h2>
+            <div class="celebrate-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 card-shadow relative overflow-hidden group text-center">
+                <div class="firework-container">
+                    <div class="firework bg-emerald-300" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
+                    <div class="firework bg-yellow-300" style="top: 10%; right: 25%; animation-delay: 1s;"></div>
+                    <div class="sparkle-star text-yellow-300" style="top: 8%; right: 15%;"><i class="fas fa-star"></i></div>
+                    <div class="sparkle-star text-emerald-300" style="bottom: 20%; left: 10%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-emerald-100 animate-bounce">
+                        축! 7+8월호 발간! 🎊✨
+                    </div>
+                    <!-- 웹진 캐릭터 이미지 영역 (그린 톤 맞춤형 플레이스홀더) -->
+                    <div class="relative w-32 h-32 mx-auto mb-4">
+                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/d1fae5/047857?text=Webzine';">
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
+                    <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
+                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
+                    </p>
+                    <div class="grid grid-cols-2 gap-3 mb-8">
+                        <a href="https://seoulgoyoung.github.io/web-zine07-08/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-emerald-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-emerald-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                            <i class="fas fa-book-open mb-1"></i>
+                            <span>웹진 보러가기</span>
+                            <span class="text-[11px] font-medium opacity-90">(7+8월호)</span>
+                        </a>
+                        <a href="https://drive.google.com/file/d/1TPiPKzS5hUE3BSl1RUb7Mptaso91TTVO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-emerald-600 border-2 border-emerald-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                            <i class="fas fa-file-pdf mb-1"></i>
+                            <span>PDF 보러가기</span>
+                            <span class="text-[11px] font-medium opacity-90">(7+8월호)</span>
+                        </a>
+                    </div>
+                    <div class="bg-emerald-50/50 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-emerald-100">
+                        <p class="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-3">Webzine Archive Page</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-pink-300 group transition-all text-left">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-pink-50 text-pink-500 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-xs font-bold text-slate-700">모바일 최적화 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-pink-400"></i>
+                            </a>
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-emerald-300 group transition-all text-left">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-emerald-50 text-emerald-500 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-xs font-bold text-slate-700">PC 와이드 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-emerald-400"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- (2) 일정 섹션 (웹진 섹션 밑으로 이동) -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900">
                 <span class="w-1.5 h-6 bg-emerald-500 rounded-full shadow-sm"></span>
                 일정
             </h2>
-            <!-- 모바일에서의 원활한 공간 확보를 위해 패딩을 p-4 sm:p-8로 조정하고 모서리 둥글기도 알맞게 리사이징 -->
             <div class="lineup-card rounded-[2rem] sm:rounded-[3rem] p-4 sm:p-8 card-shadow border-2 border-slate-200">
                 <div class="mb-10 text-center relative z-10">
                     <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
                     <h2 class="text-3xl font-black text-emerald-600 mb-2 leading-tight">행사&프로그램 라인업</h2>
-                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">Upcoming Schedule ✨</p>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase mb-1">Upcoming Schedule ✨</p>
                     <!-- 선착순 주의 문구 -->
-                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase mt-1">*선착순 마감시 신청 링크 비활성화됩니다.</p>
+                    <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">*선착순 마감시 신청 링크 비활성화됩니다.</p>
                 </div>
                 
                 <div class="space-y-6 relative z-10">
@@ -298,7 +352,7 @@
                         <a href="https://forms.gle/15phGbh6euoAr2ok7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 3] 경험에서 진가(진단-가치)찾기 (7.24 오전) - 포스터 기반 신규 추가 -->
+                    <!-- [일정 3] 경험에서 진가(진단-가치)찾기 (7.24 오전) - 마감 상태 -->
                     <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -326,11 +380,10 @@
                             <i class="fas fa-exclamation-triangle"></i> * 실업급여 구직 활동으로 인정되지 않습니다.
                         </p>
 
-                        <!-- 마감 상태 및 팝업 연동으로 변경 -->
                         <button onclick="openPopup('closed')" class="block w-full py-4 bg-slate-200 text-slate-500 text-center rounded-2xl font-bold active:scale-95 transition-all">인원 마감</button>
                     </div>
 
-                    <!-- [일정 4] 주택도시보증공사(HUG) 편 (7.24 오후) - 듀얼 버튼 연동 -->
+                    <!-- [일정 4] 주택도시보증공사(HUG) 편 (7.24 오후) -->
                     <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -347,7 +400,7 @@
                             <p>📅 일정: 2026. 7. 24. (금)</p>
                             <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
                             
-                            <!-- 세부 시간표 형태로 가독성 극대화 -->
+                            <!-- 세부 시간표 -->
                             <div class="text-slate-500 font-semibold bg-emerald-50/40 p-3 rounded-xl border border-emerald-100/40 leading-normal mt-2 space-y-1.5">
                                 <p class="text-[10px] font-black text-emerald-700 border-b border-emerald-100/50 pb-1.5 mb-1.5 uppercase">📝 세부 내용</p>
                                 <p class="flex items-start gap-1 text-[11px] text-slate-600"><span class="shrink-0 text-emerald-500">•</span><span><b>14:00 - 14:50 (1부) :</b> 안심전세 교육 - 전세사기 피해 예방 등</span></p>
@@ -363,7 +416,7 @@
                         </div>
                     </div>
 
-                    <!-- [일정 5] IBK 기업은행 편 (7.29) - 신규 신청 링크 연동으로 활성화 완료 -->
+                    <!-- [일정 5] IBK 기업은행 편 (7.29) -->
                     <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -383,7 +436,6 @@
                                 📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
                             </p>
                         </div>
-                        <!-- 요청받은 신청 링크 반영 -->
                         <a href="https://forms.gle/GF5HD8XbtEfwanzs9" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
@@ -414,61 +466,6 @@
             </div>
         </section>
 
-        <!-- (2) 청년ON-AIR (웹진 섹션 - 두 번째 배치 고정) -->
-        <section class="mb-14 px-1">
-            <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900">
-                <span class="w-1.5 h-6 bg-emerald-400 rounded-full"></span>
-                청년ON웹진
-            </h2>
-            <div class="celebrate-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 card-shadow relative overflow-hidden group text-center">
-                <div class="firework-container">
-                    <div class="firework bg-emerald-300" style="top: 15%; left: 20%; animation-delay: 0s;"></div>
-                    <div class="firework bg-yellow-300" style="top: 10%; right: 25%; animation-delay: 1s;"></div>
-                    <div class="sparkle-star text-yellow-300" style="top: 8%; right: 15%;"><i class="fas fa-star"></i></div>
-                    <div class="sparkle-star text-emerald-300" style="bottom: 20%; left: 10%; animation-delay: 0.5s;"><i class="fas fa-star"></i></div>
-                </div>
-                
-                <div class="relative z-10">
-                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-emerald-100 animate-bounce">
-                        축! 5+6월호 발간! 🎊✨
-                    </div>
-                    <!-- 웹진 캐릭터 이미지 영역 (그린 톤 맞춤형 플레이스홀더) -->
-                    <div class="relative w-32 h-32 mx-auto mb-4">
-                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/d1fae5/047857?text=Webzine';">
-                    </div>
-                    <h3 class="text-2xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
-                    <p class="text-[12px] text-slate-500 font-bold mb-8 leading-relaxed">
-                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
-                    </p>
-                    <div class="grid grid-cols-2 gap-3 mb-8">
-                        <a href="https://seoulgoyoung.github.io/web-zine05-06/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-emerald-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-emerald-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
-                            <i class="fas fa-book-open mb-1"></i>
-                            <span>웹진 보러가기</span>
-                            <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1yruj_Oy8g13jN2B17FlTyBaBbTNgQo0U/view?usp=sharing" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-emerald-600 border-2 border-emerald-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
-                            <i class="fas fa-file-pdf mb-1"></i>
-                            <span>PDF 보러가기</span>
-                            <span class="text-[11px] font-medium opacity-90">(5+6월호)</span>
-                        </a>
-                    </div>
-                    <div class="bg-emerald-50/50 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-emerald-100">
-                        <p class="text-[10px] font-black text-emerald-500 uppercase tracking-widest mb-3">Webzine Archive Page</p>
-                        <div class="flex flex-col gap-2">
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-pink-300 group transition-all text-left">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-pink-50 text-pink-500 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-xs font-bold text-slate-700">모바일 최적화 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-pink-400"></i>
-                            </a>
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-emerald-300 group transition-all text-left">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-emerald-50 text-emerald-500 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-xs font-bold text-slate-700">PC 와이드 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-emerald-400"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
         <!-- (3) 상담 & 컨설팅 예약 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900"><span class="w-1.5 h-6 bg-emerald-500 rounded-full"></span>상담 & 컨설팅 예약</h2>
