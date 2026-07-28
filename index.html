@@ -202,7 +202,6 @@
         </div>
     </header>
 
-    <!-- px-2.5로 가로 여백을 줄여 모바일 가로 활용성 확보 -->
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
         <!-- (1) 청년ON-AIR (웹진 섹션 - 최상단 배치 고정) -->
@@ -223,7 +222,6 @@
                     <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-[11px] font-bold rounded-full mb-5 shadow-lg shadow-emerald-100 animate-bounce">
                         축! 7+8월호 발간! 🎊✨
                     </div>
-                    <!-- 웹진 캐릭터 이미지 영역 (그린 톤 맞춤형 플레이스홀더) -->
                     <div class="relative w-32 h-32 mx-auto mb-4">
                         <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/d1fae5/047857?text=Webzine';">
                     </div>
@@ -260,7 +258,7 @@
             </div>
         </section>
 
-        <!-- (2) 일정 섹션 (웹진 섹션 밑으로 이동) -->
+        <!-- (2) 일정 섹션 -->
         <section class="mb-14 px-1">
             <h2 class="text-xl font-black mb-6 flex items-center gap-2 text-emerald-900">
                 <span class="w-1.5 h-6 bg-emerald-500 rounded-full shadow-sm"></span>
@@ -271,21 +269,20 @@
                     <p class="text-sm font-bold text-slate-500 mb-1 leading-tight tracking-tight">커리어 레벨업을 위한</p>
                     <h2 class="text-3xl font-black text-emerald-600 mb-2 leading-tight">행사&프로그램 라인업</h2>
                     <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase mb-1">Upcoming Schedule ✨</p>
-                    <!-- 선착순 주의 문구 -->
                     <p class="text-slate-400 text-[10px] font-bold tracking-widest uppercase">*선착순 마감시 신청 링크 비활성화됩니다.</p>
                 </div>
                 
                 <div class="space-y-6 relative z-10">
 
                     <!-- [일정 1] 청년 AI HOT 스쿨 (7.7 ~ 7.30) -->
-                    <div class="event-highlight-card rounded-[2.5rem] p-7 relative">
+                    <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
                         <div class="flex items-start justify-between mb-3">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-teal-100 text-teal-800 text-[9px] font-black rounded-full mb-2 tracking-wide">실습형 AI 교육</span>
                                 <h3 class="font-black text-lg text-slate-900 leading-tight">청년 AI HOT 스쿨</h3>
                                 <p class="text-[10px] text-emerald-600 font-bold mt-1">*HOT: Hands On Technology Training(실습형 교육)</p>
                             </div>
-                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70">
+                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70 shrink-0 ml-1">
                                 <i class="fas fa-check text-[10px]"></i>
                             </div>
                         </div>
@@ -329,96 +326,101 @@
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOoGHIPrz57H8ZRGeoTKbNVKm6IJg-3Izeg7meWKfUvMT2HQ/viewform?pli=1" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
 
-                    <!-- [일정 5] IBK 기업은행 편 (7.29) -->
-                    <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
+                    <!-- [일정 2] 취업준비콘서트 일자리톡톡 (통합 브랜치형 구조) -->
+                    <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
+                        <!-- 메인 헤더 -->
                         <div class="flex items-start justify-between mb-3">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-[9px] font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                                <h3 class="font-black text-xl text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
+                                <p class="text-[11px] text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                             </div>
-                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70 shrink-0 ml-1">
-                                <i class="fas fa-check text-[10px]"></i>
+                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-80 shrink-0 ml-1">
+                                <i class="fas fa-comments text-xs"></i>
                             </div>
                         </div>
-                        <p class="font-bold text-slate-700 mb-4">&lt;IBK 기업은행 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
-                            <p>📅 일정: 2026. 7. 29. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-emerald-50/50 p-2 rounded-xl border border-emerald-100/50 leading-normal mt-2">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <a href="https://forms.gle/GF5HD8XbtEfwanzs9" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
 
-                    <!-- [일정 6] 한국관광공사 편 (7.31) -->
-                    <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <div>
-                                <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-[9px] font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                            </div>
-                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70 shrink-0 ml-1">
-                                <i class="fas fa-check text-[10px]"></i>
-                            </div>
+                        <!-- 공통 정보 배너 -->
+                        <div class="bg-emerald-50/80 backdrop-blur-sm rounded-2xl p-3.5 border border-emerald-200/60 text-[11px] text-slate-600 space-y-1 font-medium mb-5">
+                            <p>📍 <b>장 소 :</b> 서울고용센터 1층 청년ON라운지</p>
+                            <p>📝 <b>공통 내용 :</b> 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명</p>
                         </div>
-                        <p class="font-bold text-slate-700 mb-4">&lt;한국관광공사 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
-                            <p>📅 일정: 2026. 7. 31. (금) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-emerald-50/50 p-2 rounded-xl border border-emerald-100/50 leading-normal mt-2">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <a href="https://forms.gle/5yVctSXGRLwSQwF59" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
 
-                    <!-- [일정 6] 한국공항공사 편 (8.4) -->
-                    <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <div>
-                                <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-[9px] font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
-                            </div>
-                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70 shrink-0 ml-1">
-                                <i class="fas fa-check text-[10px]"></i>
-                            </div>
+                        <!-- 기업별 라이업 서브 타이틀 -->
+                        <div class="flex items-center gap-1.5 mb-3 px-1">
+                            <i class="fas fa-building text-emerald-500 text-xs"></i>
+                            <h4 class="text-xs font-black text-slate-800 uppercase tracking-wide">기업별 콘서트 일정 및 신청</h4>
                         </div>
-                        <p class="font-bold text-slate-700 mb-4">&lt;한국공항공사 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
-                            <p>📅 일정: 2026. 8. 4. (화) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-emerald-50/50 p-2 rounded-xl border border-emerald-100/50 leading-normal mt-2">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <a href="https://forms.gle/W6Gw7vQyodaogX4z7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
-                    </div>
 
-                    <!-- [일정 7] KB국민은행 편 (8.5) -->
-                    <div class="event-highlight-card rounded-[1.5rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
-                        <div class="flex items-start justify-between mb-3">
-                            <div>
-                                <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-[9px] font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
-                                <h3 class="font-black text-lg text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-[10px] text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                        <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
+                        <div class="space-y-3 relative border-l-2 border-emerald-300/80 pl-3 sm:pl-4 ml-1">
+                            
+                            <!-- [기업 1] IBK 기업은행 편 (7.29) - 마감 처리 -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
+                                        <span class="text-xs sm:text-sm font-black text-slate-800 whitespace-nowrap">&lt;IBK 기업은행 편&gt;</span>
+                                        <span class="text-[11px] font-bold text-emerald-600 whitespace-nowrap">📅 2026. 7. 29. (수) 14:00</span>
+                                    </div>
+                                    <button onclick="openPopup('closed')" class="w-full inline-flex items-center justify-center py-2.5 bg-slate-200 text-slate-500 rounded-xl text-xs font-bold active:scale-95 transition-all shadow-sm hover:bg-slate-300">
+                                        신청 마감 <i class="fas fa-lock ml-1.5 text-[10px]"></i>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-70 shrink-0 ml-1">
-                                <i class="fas fa-check text-[10px]"></i>
+
+                            <!-- [기업 2] 한국관광공사 편 (7.31) -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
+                                        <span class="text-xs sm:text-sm font-black text-slate-800 whitespace-nowrap">&lt;한국관광공사 편&gt;</span>
+                                        <span class="text-[11px] font-bold text-emerald-600 whitespace-nowrap">📅 2026. 7. 31. (금) 14:00</span>
+                                    </div>
+                                    <a href="https://forms.gle/5yVctSXGRLwSQwF59" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md">
+                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-[10px]"></i>
+                                    </a>
+                                </div>
                             </div>
+
+                            <!-- [기업 3] 한국공항공사 편 (8.4) -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
+                                        <span class="text-xs sm:text-sm font-black text-slate-800 whitespace-nowrap">&lt;한국공항공사 편&gt;</span>
+                                        <span class="text-[11px] font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 4. (화) 14:00</span>
+                                    </div>
+                                    <a href="https://forms.gle/W6Gw7vQyodaogX4z7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md">
+                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- [기업 4] KB국민은행 편 (8.5) -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
+                                        <span class="text-xs sm:text-sm font-black text-slate-800 whitespace-nowrap">&lt;KB국민은행 편&gt;</span>
+                                        <span class="text-[11px] font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 5. (수) 14:00</span>
+                                    </div>
+                                    <a href="https://forms.gle/LHAEgtScZxR4tBDW7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md">
+                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- [기업 5] 현대모비스 편 (8.12) - 신규 추가 -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
+                                        <span class="text-xs sm:text-sm font-black text-slate-800 whitespace-nowrap">&lt;현대모비스 편&gt;</span>
+                                        <span class="text-[11px] font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 12. (수) 14:00</span>
+                                    </div>
+                                    <a href="https://forms.gle/1AdkZ38PnzjbRsC2A" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-xs font-bold active:scale-95 transition-all shadow-md">
+                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
+
                         </div>
-                        <p class="font-bold text-slate-700 mb-4">&lt;KB국민은행 편&gt;</p>
-                        <div class="text-[11px] text-slate-500 space-y-1.5 mb-6 font-medium">
-                            <p>📅 일정: 2026. 8. 5. (수) 14:00</p>
-                            <p>📍 장소: 서울고용센터 1층 청년ON라운지</p>
-                            <p class="text-slate-500 font-semibold bg-emerald-50/50 p-2 rounded-xl border border-emerald-100/50 leading-normal mt-2">
-                                📝 내용: 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명
-                            </p>
-                        </div>
-                        <a href="https://forms.gle/LHAEgtScZxR4tBDW7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-4 bg-emerald-600 text-white text-center rounded-2xl font-bold shadow-lg active:scale-95 transition-all">신청 바로가기</a>
                     </div>
                     
                 </div>
