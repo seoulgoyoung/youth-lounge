@@ -204,7 +204,7 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
-        <!-- (1) 청년ON-AIR (웹진 섹션 - 최상단 배치 고정) -->
+        <!-- (1) 청년ON-AIR (웹진 섹션) -->
         <section class="mb-14 px-1">
             <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-emerald-900">
                 <span class="w-2 h-7 bg-emerald-400 rounded-full"></span>
@@ -303,20 +303,7 @@
                         <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
                         <div class="space-y-3 relative border-l-2 border-emerald-300/80 pl-3 sm:pl-4 ml-1">
 
-                            <!-- [기업 1] 한국공항공사 편 (8.4) - 마감 처리 -->
-                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
-                                <div class="flex flex-col gap-2.5">
-                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
-                                        <span class="text-sm sm:text-base font-black text-slate-800 whitespace-nowrap">&lt;한국공항공사 편&gt;</span>
-                                        <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 4. (화) 14:00</span>
-                                    </div>
-                                    <button onclick="openPopup('closed')" class="w-full inline-flex items-center justify-center py-2.5 bg-slate-200 text-slate-500 rounded-xl text-sm font-bold active:scale-95 transition-all shadow-sm hover:bg-slate-300">
-                                        신청 마감 <i class="fas fa-lock ml-1.5 text-xs"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- [기업 2] KB국민은행 편 (8.5) -->
+                            <!-- [기업 1] KB국민은행 편 (8.5) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
@@ -329,7 +316,7 @@
                                 </div>
                             </div>
 
-                            <!-- [기업 3] 현대모비스 편 (8.12) -->
+                            <!-- [기업 2] 현대모비스 편 (8.12) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
@@ -342,7 +329,7 @@
                                 </div>
                             </div>
 
-                            <!-- [기업 4] CJ ENM 편 (8.21) -->
+                            <!-- [기업 3] CJ ENM 편 (8.21) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
@@ -500,18 +487,32 @@
         const messageEl = document.getElementById('popupMessage');
         const iconEl = document.getElementById('popupIcon');
 
-        // 외부 링크 이동 시 안전한 새 창 열기 처리 (iframe 콘솔 에러 방지)
+        function safeOpen(url) {
+            if (url) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
+
         function forceLink(url) {
-            if (!url) return true;
+            if (!url) return false;
+            
             try {
-                const newWin = window.open(url, '_blank', 'noopener,noreferrer');
-                if (newWin) {
-                    return false; // 새 창이상없이 열리면 <a> 기본동작 방지
+                const win = window.open(url, '_blank', 'noopener,noreferrer');
+                if (win) return false;
+            } catch (e) {
+                console.error("Window.open 차단됨. 2차 수단 가동.", e);
+            }
+            
+            try {
+                if (window.top && window.top !== window.self) {
+                    window.top.location.href = url;
+                    return false; 
                 }
             } catch (e) {
-                console.warn("Pop-up blocked or constrained environment:", e);
+                console.warn("샌드박스 정책으로 window.top 접근 불가. 기본 브라우저 처리 보장용 href 폴백 사용.");
             }
-            return true; // 팝업 차단 또는 예외 상황 시 기본 <a> 링크 이동 활용
+            
+            return true;
         }
 
         function openPopup(type) { 
@@ -525,17 +526,13 @@
                 messageEl.innerHTML = '해당 콘텐츠는<br><b class="text-emerald-600">추후 공개 예정</b>입니다.';
                 iconEl.className = "w-16 h-16 bg-emerald-50 text-emerald-500 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-emerald-100";
             }
-            if (overlay && box) {
-                overlay.style.display = 'block'; 
-                box.style.display = 'block'; 
-            }
+            overlay.style.display = 'block'; 
+            box.style.display = 'block'; 
         }
 
         function closePopup() { 
-            if (overlay && box) {
-                overlay.style.display = 'none'; 
-                box.style.display = 'none'; 
-            }
+            overlay.style.display = 'none'; 
+            box.style.display = 'none'; 
         }
     </script>
 </body>
