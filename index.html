@@ -204,7 +204,7 @@
 
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
-        <!-- (1) 일정 섹션 -->
+        <!-- (1) 일정 섹션 (최상단) -->
         <section class="mb-14 px-1">
             <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-emerald-900">
                 <span class="w-2 h-7 bg-emerald-500 rounded-full shadow-sm"></span>
@@ -227,7 +227,7 @@
                             <div>
                                 <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
                                 <h3 class="font-black text-2xl text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-xs text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
+                                <p class="text-xs text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&amp;직무 인사이트</p>
                             </div>
                             <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-80 shrink-0 ml-1">
                                 <i class="fas fa-comments text-sm"></i>
@@ -249,16 +249,16 @@
                         <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
                         <div class="space-y-3 relative border-l-2 border-emerald-300/80 pl-3 sm:pl-4 ml-1">
 
-                            <!-- [기업 1] 현대모비스 편 (8.12) -->
+                            <!-- [기업 1] 현대모비스 편 (8.12) - 마감 처리 -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
                                         <span class="text-sm sm:text-base font-black text-slate-800 whitespace-nowrap">&lt;현대모비스 편&gt;</span>
                                         <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 12. (수) 14:00</span>
                                     </div>
-                                    <a href="https://forms.gle/1AdkZ38PnzjbRsC2A" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md">
-                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
-                                    </a>
+                                    <button onclick="openPopup('closed')" class="w-full inline-flex items-center justify-center py-2.5 bg-slate-200 text-slate-500 rounded-xl text-sm font-bold active:scale-95 transition-all shadow-sm hover:bg-slate-300">
+                                        신청 마감 <i class="fas fa-lock ml-1.5 text-xs"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -275,7 +275,7 @@
                                 </div>
                             </div>
 
-                            <!-- [기업 3] 동원그룹 편 (8.26) -->
+                            <!-- [기업 3] 동원그룹 편 (8.26) - 신청 링크 오픈 -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
@@ -303,7 +303,50 @@
 
                         </div>
                     </div>
-                    
+
+                    <!-- [경험에서 진단-가치 찾기 프로그램] (8.28) -->
+                    <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative border-amber-300">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-black rounded-full mb-2 tracking-wide">경력진단 프로그램</span>
+                                <h3 class="font-black text-2xl text-slate-900 leading-tight">경험에서 진단-가치 찾기 프로그램</h3>
+                                <p class="text-xs text-amber-700 font-bold mt-1.5 leading-snug">
+                                    내 경험이 진짜 경력이 되는 순간, &lt;커리어 브릿지&gt;
+                                </p>
+                            </div>
+                            <div class="w-8 h-8 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center opacity-90 shrink-0 ml-1">
+                                <i class="fas fa-search-location text-sm"></i>
+                            </div>
+                        </div>
+
+                        <!-- 상세 정보 안내 배너 -->
+                        <div class="bg-amber-50/80 backdrop-blur-sm rounded-2xl p-3.5 border border-amber-200/70 text-xs text-slate-700 space-y-1.5 font-medium mb-4">
+                            <p>📅 <b>일 정 :</b> 2026. 8. 28. (금) 14:00 - 17:00 (3시간 내외)</p>
+                            <p>📍 <b>장 소 :</b> 서울고용센터 4층 성취프로그램실</p>
+                            <p>👤 <b>신청대상 :</b> 경력 청년 (20~34세) 실업급여 수급자, 일반구직자 20명 내외 <span class="text-rose-500 font-bold">(선착순 마감 예정)</span></p>
+                            <p>👩‍🏫 <b>강 사 :</b> 한국표준협회 수석전문 위원 최금옥 강사</p>
+                        </div>
+
+                        <!-- 5단계 주요 커리큘럼 간략 요약 -->
+                        <div class="bg-white rounded-2xl p-3.5 border border-amber-100 card-shadow mb-5 space-y-2">
+                            <p class="text-xs font-black text-amber-800 flex items-center gap-1.5 border-b border-amber-100 pb-1.5">
+                                <i class="fas fa-list-check text-amber-500"></i> 주요 프로그램 구성 (5단계)
+                            </p>
+                            <div class="grid grid-cols-1 gap-1.5 text-[11px] text-slate-700 font-medium">
+                                <div class="flex items-center gap-2"><span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px] shrink-0">1단계</span> <span><b>현실점검:</b> 내 경력 분석 및 '물경력' 진단</span></div>
+                                <div class="flex items-center gap-2"><span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px] shrink-0">2단계</span> <span><b>과거진단:</b> 조직 경험 분석 &amp; 찰떡 적합 환경 파악</span></div>
+                                <div class="flex items-center gap-2"><span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px] shrink-0">3단계</span> <span><b>핵심역량:</b> 평범한 경험도 '무적의 치트키'로 변신</span></div>
+                                <div class="flex items-center gap-2"><span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px] shrink-0">4단계</span> <span><b>커리어설계:</b> 직업가치 찾고 나만의 커리어 지도 그리기</span></div>
+                                <div class="flex items-center gap-2"><span class="bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded text-[10px] shrink-0">5단계</span> <span><b>조직적응:</b> 어딜 가나 인정받는 조직 적응 꿀팁</span></div>
+                            </div>
+                        </div>
+
+                        <!-- QR코드 연결 신청 버튼 -->
+                        <a href="https://form.naver.com/response/5GDchwgr2vm" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-3 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
+                            신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -364,7 +407,7 @@
 
         <!-- (3) 상담 & 컨설팅 예약 -->
         <section class="mb-14 px-1">
-            <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-emerald-900"><span class="w-2 h-7 bg-emerald-500 rounded-full"></span>상담 & 컨설팅 예약</h2>
+            <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-emerald-900"><span class="w-2 h-7 bg-emerald-500 rounded-full"></span>상담 &amp; 컨설팅 예약</h2>
             <div class="bg-white rounded-[2.5rem] p-4 sm:p-6 card-shadow border-2 border-slate-200">
                 <div class="space-y-4">
                     <a href="https://booking.naver.com/booking/6/bizes/1355869" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-200 hover:bg-emerald-50 transition-all text-left group">
@@ -431,7 +474,7 @@
                 <div class="bg-white rounded-[1.5rem] p-3 sm:p-5 border-2 border-emerald-200 card-shadow flex flex-col items-center text-center">
                     <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-microphone-alt text-lg"></i></div>
                     <h3 class="text-sm font-black text-slate-800 leading-tight mb-2">취업준비콘서트</h3>
-                    <p class="text-[10px] text-slate-500 leading-relaxed font-medium text-wrap">현직자가 전하는 생생한 직무 & 채용 토크</p>
+                    <p class="text-[10px] text-slate-500 leading-relaxed font-medium text-wrap">현직자가 전하는 생생한 직무 &amp; 채용 토크</p>
                 </div>
                 <div class="bg-white rounded-[1.5rem] p-3 sm:p-5 border-2 border-teal-100 card-shadow flex flex-col items-center text-center">
                     <div class="w-10 h-10 bg-teal-50 text-teal-500 rounded-xl flex items-center justify-center mb-3 shadow-sm"><i class="fas fa-user-tie text-lg"></i></div>
@@ -476,7 +519,7 @@
                         <img src="https://img.youtube.com/vi/t9VuIGy1j1Q/mqdefault.jpg" alt="EP.2" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/20"><i class="fas fa-play text-white text-2xl"></i></div>
                     </div>
-                    <div class="px-1"><h4 class="text-sm font-black text-slate-800 leading-tight">취재 영상 EP.2</h4><p class="text-xs text-slate-400 mt-1">행사 & 프로그램 현장 탐방</p></div>
+                    <div class="px-1"><h4 class="text-sm font-black text-slate-800 leading-tight">취재 영상 EP.2</h4><p class="text-xs text-slate-400 mt-1">행사 &amp; 프로그램 현장 탐방</p></div>
                 </a>
             </div>
         </section>
