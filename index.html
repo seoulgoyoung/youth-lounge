@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>서울고용센터 청년ON라운지</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Pretendard Font & Custom Styles -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;900&display=swap');
         
@@ -33,7 +36,10 @@
         }
 
         .wave-container svg {
-            position: relative; display: block; width: calc(150% + 1.3px); height: 80px;
+            position: relative; 
+            display: block; 
+            width: calc(150% + 1.3px); 
+            height: 80px;
         }
 
         /* 푸터 아치 */
@@ -73,7 +79,7 @@
             to { box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), 0 10px 40px -5px rgba(16, 185, 129, 0.15); }
         }
 
-        /* 폭죽 효과 */
+        /* 폭죽 및 반짝이 효과 */
         .firework-container {
             position: absolute;
             inset: 0;
@@ -138,13 +144,23 @@
 
         .card-shadow { box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08); }
 
-        /* 팝업 스타일 */
+        /* 팝업 모달 스타일 */
         .popup-overlay {
-            display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(5px); z-index: 1000;
+            display: none; 
+            position: fixed; 
+            inset: 0; 
+            background: rgba(0, 0, 0, 0.4); 
+            backdrop-filter: blur(5px); 
+            z-index: 1000;
         }
 
         .popup-content {
-            display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1001;
+            display: none; 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            z-index: 1001;
             animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
@@ -202,6 +218,7 @@
         </div>
     </header>
 
+    <!-- Main Container -->
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
         <!-- (1) 일정 섹션 (최상단) -->
@@ -220,14 +237,14 @@
                 
                 <div class="space-y-6 relative z-10">
 
-                    <!-- 취업준비콘서트 일자리톡톡 (통합 브랜치형 구조) -->
+                    <!-- [취업준비콘서트 일자리톡톡] -->
                     <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
                         <!-- 메인 헤더 -->
                         <div class="flex items-start justify-between mb-3">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
                                 <h3 class="font-black text-2xl text-slate-900 leading-tight">취업준비콘서트 일자리톡톡</h3>
-                                <p class="text-xs text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&amp;직무 인사이트</p>
+                                <p class="text-xs text-emerald-600 font-bold mt-1">현직자에게 듣는 생생한 채용&직무 인사이트</p>
                             </div>
                             <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center opacity-80 shrink-0 ml-1">
                                 <i class="fas fa-comments text-sm"></i>
@@ -249,20 +266,7 @@
                         <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
                         <div class="space-y-3 relative border-l-2 border-emerald-300/80 pl-3 sm:pl-4 ml-1">
 
-                            <!-- [기업 1] LIG디펜스&에어로스페이스 편 (8.28) - 신청 마감 -->
-                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
-                                <div class="flex flex-col gap-2.5">
-                                    <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
-                                        <span class="text-sm sm:text-base font-black text-slate-800 whitespace-nowrap">&lt;LIG디펜스&amp;에어로스페이스 편&gt;</span>
-                                        <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 8. 28. (금) 14:00</span>
-                                    </div>
-                                    <button onclick="openPopup('closed')" class="w-full inline-flex items-center justify-center py-2.5 bg-slate-200 text-slate-500 rounded-xl text-sm font-bold active:scale-95 transition-all shadow-sm hover:bg-slate-300">
-                                        신청 마감 <i class="fas fa-lock ml-1.5 text-xs"></i>
-                                    </button>
-                                </div>
-                            </div>
-
-                            <!-- [기업 3] CJ 푸드빌-Floor&Kitchen 직종 채용설명회 편 (9.1) - 신청 링크 오픈 -->
+                            <!-- [기업 1] CJ 푸드빌-Floor&Kitchen 직종 채용설명회 편 (9.1) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
@@ -272,33 +276,54 @@
                                         </div>
                                         <span class="text-xs font-bold text-emerald-600 whitespace-nowrap mt-0.5">📅 2026. 9. 1. (화) 14:00</span>
                                     </div>
-                                    <a href="https://forms.gle/s7x8VkLMcJe9ppCJ7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md">
+                                    <a href="https://forms.gle/s7x8VkLMcJe9ppCJ7" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
                                         신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- [기업 4] NH농협은행 편 (9.2) - 신청 링크 오픈 -->
+                            <!-- [기업 2] NH농협은행 편 (9.2) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
                                         <span class="text-sm sm:text-base font-black text-slate-800 whitespace-nowrap">&lt;NH농협은행 편&gt;</span>
                                         <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 9. 2. (수) 14:00</span>
                                     </div>
-                                    <a href="https://forms.gle/2mmtKko5tTeCErnZ9" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md">
+                                    <a href="https://forms.gle/2mmtKko5tTeCErnZ9" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
                                         신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
                                     </a>
                                 </div>
                             </div>
 
-                            <!-- [기업 4] 한국마사회 편 (9.4) - 신청 링크 오픈 -->
+                            <!-- [기업 3] 한국마사회 편 (9.4) -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
                                         <span class="text-sm sm:text-base font-black text-slate-800 whitespace-nowrap">&lt;한국마사회 편&gt;</span>
                                         <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 9. 4. (금) 14:00</span>
                                     </div>
-                                    <a href="https://docs.google.com/forms/u/1/d/1dUODQvNgjmIuI2ToIQhtF0uEV4yVFveWID9blW1vDEg/edit" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md">
+                                    <a href="https://docs.google.com/forms/u/1/d/1dUODQvNgjmIuI2ToIQhtF0uEV4yVFveWID9blW1vDEg/edit" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
+                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- [기업 4] 차지코리아 편 (9.8) -->
+                            <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
+                                <div class="flex flex-col gap-2.5">
+                                    <div class="flex flex-col items-center justify-center gap-1.5 border-b border-slate-100 pb-2.5 text-center">
+                                        <div class="flex flex-col items-center leading-snug">
+                                            <span class="text-sm sm:text-base font-black text-slate-800">&lt;차지코리아 편&gt;</span>
+                                            <span class="text-[11px] sm:text-xs font-extrabold text-slate-700 mt-0.5 break-words">채용설명회&amp;현장면접</span>
+                                            <div class="mt-1.5">
+                                                <span class="inline-block px-3 py-0.5 bg-[#cb2027] text-white font-extrabold text-[11px] sm:text-xs rounded-full shadow-sm tracking-tight ring-2 ring-red-200">
+                                                    모집직종 - 티바리스타
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <span class="text-xs font-bold text-emerald-600 whitespace-nowrap mt-0.5">📅 2026. 9. 8. (화) 14:00</span>
+                                    </div>
+                                    <a href="https://forms.gle/LGSBBYESfBdXQ65m6" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
                                         신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
                                     </a>
                                 </div>
@@ -307,7 +332,7 @@
                         </div>
                     </div>
 
-                    <!-- [경험에서 진단-가치 찾기 프로그램] (8.28) -->
+                    <!-- [경험에서 진단-가치 찾기 프로그램] -->
                     <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative border-amber-300">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -380,12 +405,12 @@
                         청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
                     </p>
                     <div class="grid grid-cols-2 gap-3 mb-8">
-                        <a href="https://seoulgoyoung.github.io/web-zine07-08/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-emerald-600 text-white text-center rounded-2xl font-black text-base shadow-lg shadow-emerald-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                        <a href="https://seoulgoyoung.github.io/web-zine07-08/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-emerald-600 text-white text-center rounded-2xl font-black text-base shadow-lg shadow-emerald-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-emerald-700">
                             <i class="fas fa-book-open mb-1"></i>
                             <span>웹진 보러가기</span>
                             <span class="text-xs font-medium opacity-90">(7+8월호)</span>
                         </a>
-                        <a href="https://drive.google.com/file/d/1TPiPKzS5hUE3BSl1RUb7Mptaso91TTVO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-emerald-600 border-2 border-emerald-600 rounded-2xl font-black text-base active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5">
+                        <a href="https://drive.google.com/file/d/1TPiPKzS5hUE3BSl1RUb7Mptaso91TTVO/view?usp=drive_link" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-4 bg-white text-emerald-600 border-2 border-emerald-600 rounded-2xl font-black text-base active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-emerald-50">
                             <i class="fas fa-file-pdf mb-1"></i>
                             <span>PDF 보러가기</span>
                             <span class="text-xs font-medium opacity-90">(7+8월호)</span>
@@ -448,7 +473,7 @@
                             <h4 class="font-bold text-slate-800 text-lg">스터디룸 4,5,6</h4>
                         </div>
                         <p class="text-xs text-slate-500 font-medium mb-4 leading-relaxed">최대 6명 수용 가능한 최적의 스터디 공간입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6553048" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-3 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all text-center">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6553048" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-3 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all text-center hover:bg-emerald-700">예약하기</a>
                     </div>
                     <div class="p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-white card-shadow">
                         <div class="flex items-center gap-4 mb-3">
@@ -456,7 +481,7 @@
                             <h4 class="font-bold text-slate-800 text-lg">AI면접실</h4>
                         </div>
                         <p class="text-xs text-slate-500 font-medium mb-4 leading-relaxed">인공지능 기반의 최신 면접 연습 시스템입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-3 bg-teal-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md text-center">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="block w-full py-3 bg-teal-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md text-center hover:bg-teal-700">예약하기</a>
                     </div>
                 </div>
             </div>
@@ -501,7 +526,7 @@
                 <div class="text-center pb-2">
                     <p class="font-black text-slate-800 text-lg">서울고용복지플러스센터 1층</p>
                     <p class="text-xs text-slate-400 font-medium mb-6">서울특별시 중구 삼일대로 363 (서울지방고용노동청)</p>
-                    <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-base font-bold shadow-lg active:scale-95 transition-all text-center"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
+                    <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-base font-bold shadow-lg active:scale-95 transition-all text-center hover:opacity-95"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
                 </div>
             </div>
         </section>
