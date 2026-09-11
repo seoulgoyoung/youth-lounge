@@ -266,16 +266,16 @@
                         <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
                         <div class="space-y-3 relative border-l-2 border-emerald-300/80 pl-3 sm:pl-4 ml-1">
 
-                            <!-- [기업 1] 코트라(대한무역투자진흥공사) 편 (9.11) -->
+                            <!-- [기업 1] 코트라(대한무역투자진흥공사) 편 (9.11) - 마감 처리 -->
                             <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-emerald-100 card-shadow relative group">
                                 <div class="flex flex-col gap-2.5">
                                     <div class="flex flex-col items-center justify-center gap-1 border-b border-slate-100 pb-2 text-center">
                                         <span class="text-sm sm:text-base font-black text-slate-800 leading-snug">&lt;코트라(대한무역투자진흥공사) 편&gt;</span>
                                         <span class="text-xs font-bold text-emerald-600 whitespace-nowrap">📅 2026. 9. 11. (금) 14:00</span>
                                     </div>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJmBE_sOsgrsSEWCHIByZF71eNZhB2RFyWLmMAjZJmvangEw/viewform?usp=header" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-2.5 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
-                                        신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
-                                    </a>
+                                    <button onclick="openPopup('closed')" class="w-full inline-flex items-center justify-center py-2.5 bg-slate-200 text-slate-500 rounded-xl text-sm font-bold active:scale-95 transition-all shadow-sm hover:bg-slate-300">
+                                        신청 마감 <i class="fas fa-lock ml-1.5 text-xs"></i>
+                                    </button>
                                 </div>
                             </div>
 
@@ -293,6 +293,47 @@
                             </div>
 
                         </div>
+                    </div>
+
+                    <!-- [프로그램] 경험에서 진단-가치 찾기 프로그램 (9.29) -->
+                    <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-black rounded-full mb-2 tracking-wide">경력진단 프로그램</span>
+                                <h3 class="font-black text-xl sm:text-2xl text-slate-900 leading-tight">경험에서 진단-가치 찾기 프로그램</h3>
+                                <p class="text-xs text-amber-600 font-bold mt-1">내 경험이 진짜 경력이 되는 순간, &lt;커리어 브릿지&gt;</p>
+                            </div>
+                            <div class="w-8 h-8 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center opacity-80 shrink-0 ml-1">
+                                <i class="fas fa-compass text-sm"></i>
+                            </div>
+                        </div>
+
+                        <!-- 프로그램 정보 배너 -->
+                        <div class="bg-amber-50/80 backdrop-blur-sm rounded-2xl p-3.5 border border-amber-200/60 text-xs text-slate-600 space-y-1.5 font-medium mb-5">
+                            <p>📅 <b>일 시 :</b> 2026. 9. 29. (화) 14:00 ~ 17:00 (3시간 내외)</p>
+                            <p>📍 <b>장 소 :</b> 서울고용센터 4층 성취프로그램실</p>
+                            <p>👤 <b>신청대상 :</b> 경력 청년 (20~34세) 실업급여 수급자, 일반구직자 20명 내외 (선착순 마감 예정)</p>
+                            <p>👩‍🏫 <b>강 사 :</b> 한국표준협회 수석전문 위원 최금옥 강사</p>
+                        </div>
+
+                        <!-- 5단계 구성 -->
+                        <div class="bg-white/90 rounded-2xl p-4 border border-amber-100 mb-5 space-y-2 text-xs">
+                            <p class="font-black text-slate-800 mb-2 border-b border-slate-100 pb-1 flex items-center gap-1">
+                                <i class="fas fa-list-ol text-amber-500"></i> 주요 프로그램 구성 (5단계)
+                            </p>
+                            <div class="space-y-1.5 text-slate-700">
+                                <p><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded mr-1">1단계</span> <b>현실점검:</b> 내 경력 분석 및 '물경력' 진단</p>
+                                <p><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded mr-1">2단계</span> <b>과거진단:</b> 조직 경험 분석 &amp; 찰떡 적합 환경 파악</p>
+                                <p><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded mr-1">3단계</span> <b>핵심역량:</b> 평범한 경험도 '무적의 치트키'로 변신</p>
+                                <p><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded mr-1">4단계</span> <b>커리어설계:</b> 직업가치 찾고 나만의 커리어 지도 그리기</p>
+                                <p><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded mr-1">5단계</span> <b>조직적응:</b> 어디서나 환영받는 인정 꿀팁 전수</p>
+                            </div>
+                        </div>
+
+                        <!-- 신청 링크 버튼 -->
+                        <a href="https://m.site.naver.com/2fn3U" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="w-full inline-flex items-center justify-center py-3 bg-emerald-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-emerald-700">
+                            신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
+                        </a>
                     </div>
 
                 </div>
