@@ -115,13 +115,10 @@
             100% { transform: translateX(0px) rotate(360deg); }
         }
 
-        /* 낙엽 위치/지연 무작위화 설정 */
-        .leaf:nth-child(1) { left: 10%; animation-duration: 9s, 3.5s; animation-delay: 0s, 0s; font-size: 18px; }
-        .leaf:nth-child(2) { left: 25%; animation-duration: 12s, 4s; animation-delay: 2s, 1s; font-size: 22px; }
-        .leaf:nth-child(3) { left: 45%; animation-duration: 8s, 2.8s; animation-delay: 4s, 0.5s; font-size: 16px; }
-        .leaf:nth-child(4) { left: 65%; animation-duration: 11s, 3.2s; animation-delay: 1s, 2s; font-size: 24px; }
-        .leaf:nth-child(5) { left: 80%; animation-duration: 10s, 3.8s; animation-delay: 5s, 1.5s; font-size: 20px; }
-        .leaf:nth-child(6) { left: 92%; animation-duration: 13s, 4.2s; animation-delay: 3s, 0.8s; font-size: 17px; }
+        /* 낙엽 위치/지연 개수 감소 및 속도/투명도 완화 */
+        .leaf:nth-child(1) { left: 15%; animation-duration: 15s, 4.5s; animation-delay: 0s, 0s; font-size: 16px; opacity: 0.45; }
+        .leaf:nth-child(2) { left: 52%; animation-duration: 18s, 5.2s; animation-delay: 5s, 1.5s; font-size: 19px; opacity: 0.5; }
+        .leaf:nth-child(3) { left: 85%; animation-duration: 16s, 4.8s; animation-delay: 9s, 0.8s; font-size: 16px; opacity: 0.45; }
 
         /* 일정 카드 따뜻한 가을 톤 강조 */
         .event-highlight-card {
@@ -189,14 +186,11 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 흩날리는 가을 낙엽 효과 -->
+    <!-- 흩날리는 가을 낙엽 효과 (수량 감소 및 은은하게 연출) -->
     <div class="falling-leaves-container">
         <div class="leaf">🍁</div>
         <div class="leaf">🍂</div>
         <div class="leaf">🍁</div>
-        <div class="leaf">🍂</div>
-        <div class="leaf">🍁</div>
-        <div class="leaf">🍂</div>
     </div>
 
     <!-- 커스텀 팝업 (가을 엠버 테마 적용) -->
@@ -264,7 +258,7 @@
                             <span>웹진 (모바일)</span>
                             <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
                         </a>
-                        <a href="https://webzine0910.netlify.app/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
+                        <a href="https://beautiful-pudding-972efa.netlify.app/" target="_blank" rel="noopener noreferrer" onclick="return forceLink(this.href);" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
                             <i class="fas fa-desktop text-base mb-0.5"></i>
                             <span>웹진 (PC)</span>
                             <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
@@ -589,3 +583,4 @@
     </script>
 </body>
 </html>
+```
