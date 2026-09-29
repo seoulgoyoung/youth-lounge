@@ -185,14 +185,14 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 흩날리는 가을 낙엽 효과 (은은하게 개수 조정) -->
+    <!-- 흩날리는 가을 낙엽 효과 -->
     <div class="falling-leaves-container">
         <div class="leaf">🍁</div>
         <div class="leaf">🍂</div>
         <div class="leaf">🍁</div>
     </div>
 
-    <!-- 커스텀 팝업 (가을 엠버 테마 적용) -->
+    <!-- 커스텀 팝업 -->
     <div id="popupOverlay" class="popup-overlay" onclick="closePopup()"></div>
     <div id="popupBox" class="popup-content bg-white p-8 rounded-[2.5rem] shadow-2xl w-[85%] max-w-[320px] text-center border-2 border-slate-100">
         <div id="popupIcon" class="w-16 h-16 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-5 border-2 border-amber-100">
@@ -231,59 +231,7 @@
     <!-- Main Container -->
     <main class="max-w-md mx-auto -mt-16 pb-0 px-2.5 sm:px-5 relative z-20">
         
-        <!-- (1) 청년ON-AIR (웹진 섹션 - 최상단 배치) -->
-        <section class="mb-14 px-1">
-            <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-amber-950">
-                <span class="w-2 h-7 bg-amber-500 rounded-full"></span>
-                청년ON웹진
-            </h2>
-            <div class="celebrate-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 card-shadow relative overflow-hidden group text-center">
-                <div class="relative z-10">
-                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold rounded-full mb-5 shadow-lg shadow-amber-200 animate-bounce">
-                        축! 9+10월호 발간! 🍁🍂
-                    </div>
-                    <div class="relative w-32 h-32 mx-auto mb-4">
-                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/ffedd5/c2410c?text=Webzine';">
-                    </div>
-                    <h3 class="text-3xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
-                    <p class="text-sm text-slate-500 font-bold mb-8 leading-relaxed">
-                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
-                    </p>
-                    <!-- 웹진 버튼 영역 (모바일 / PC 분리) -->
-                    <div class="grid grid-cols-2 gap-3 mb-3">
-                        <a href="https://seoulgoyoung.github.io/web-zine09-10/" target="_blank" class="py-3.5 bg-amber-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-amber-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-amber-700">
-                            <i class="fas fa-mobile-alt text-base mb-0.5"></i>
-                            <span>웹진 (모바일)</span>
-                            <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
-                        </a>
-                        <a href="https://beautiful-pudding-972efa.netlify.app/" target="_blank" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
-                            <i class="fas fa-desktop text-base mb-0.5"></i>
-                            <span>웹진 (PC)</span>
-                            <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
-                        </a>
-                    </div>
-                    <a href="https://drive.google.com/file/d/1ZzAIJB5FUzQnyFFCC7LnsXF972gzCYgg/view?usp=sharing" target="_blank" class="w-full py-3 bg-white text-amber-700 border-2 border-amber-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex items-center justify-center gap-2 hover:bg-amber-50 mb-8">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>PDF 보러가기 (9+10월호)</span>
-                    </a>
-                    <div class="bg-amber-50/60 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-amber-200/70">
-                        <p class="text-xs font-black text-amber-700 uppercase tracking-widest mb-3">Webzine Archive Page</p>
-                        <div class="flex flex-col gap-2">
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-orange-300 group transition-all text-left">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-sm font-bold text-slate-700">모바일 최적화 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-orange-500"></i>
-                            </a>
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-amber-300 group transition-all text-left">
-                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-sm font-bold text-slate-700">PC 와이드 버전</span></div>
-                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- (2) 일정 섹션 -->
+        <!-- (1) 일정 섹션 (최상단 배치) -->
         <section class="mb-14 px-1">
             <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-amber-950">
                 <span class="w-2 h-7 bg-amber-600 rounded-full shadow-sm"></span>
@@ -299,7 +247,7 @@
                 
                 <div class="space-y-6 relative z-10">
 
-                    <!-- [청년 AI:N.E.X.T 스쿨 신규 추가] -->
+                    <!-- [청년 AI:N.E.X.T 스쿨] -->
                     <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative border-2 border-orange-200">
                         <div class="flex items-start justify-between mb-3">
                             <div>
@@ -388,6 +336,58 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- (2) 청년ON-AIR (웹진 섹션 - 두번째 배치) -->
+        <section class="mb-14 px-1">
+            <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-amber-950">
+                <span class="w-2 h-7 bg-amber-500 rounded-full"></span>
+                청년ON웹진
+            </h2>
+            <div class="celebrate-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 card-shadow relative overflow-hidden group text-center">
+                <div class="relative z-10">
+                    <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold rounded-full mb-5 shadow-lg shadow-amber-200 animate-bounce">
+                        축! 9+10월호 발간! 🍁🍂
+                    </div>
+                    <div class="relative w-32 h-32 mx-auto mb-4">
+                        <img src="8.png" alt="웹진 캐릭터" class="w-full h-full object-contain rounded-2xl drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/128x128/ffedd5/c2410c?text=Webzine';">
+                    </div>
+                    <h3 class="text-3xl font-black text-slate-800 mb-1">청년ON-AIR</h3>
+                    <p class="text-sm text-slate-500 font-bold mb-8 leading-relaxed">
+                        청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
+                    </p>
+                    <!-- 웹진 버튼 영역 (모바일 / PC 분리) -->
+                    <div class="grid grid-cols-2 gap-3 mb-3">
+                        <a href="https://seoulgoyoung.github.io/web-zine09-10/" target="_blank" class="py-3.5 bg-amber-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-amber-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-amber-700">
+                            <i class="fas fa-mobile-alt text-base mb-0.5"></i>
+                            <span>웹진 (모바일)</span>
+                            <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
+                        </a>
+                        <a href="https://webzine0910.netlify.app/" target="_blank" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
+                            <i class="fas fa-desktop text-base mb-0.5"></i>
+                            <span>웹진 (PC)</span>
+                            <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
+                        </a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1ZzAIJB5FUzQnyFFCC7LnsXF972gzCYgg/view?usp=sharing" target="_blank" class="w-full py-3 bg-white text-amber-700 border-2 border-amber-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex items-center justify-center gap-2 hover:bg-amber-50 mb-8">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF 보러가기 (9+10월호)</span>
+                    </a>
+                    <div class="bg-amber-50/60 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-amber-200/70">
+                        <p class="text-xs font-black text-amber-700 uppercase tracking-widest mb-3">Webzine Archive Page</p>
+                        <div class="flex flex-col gap-2">
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-orange-300 group transition-all text-left">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-sm font-bold text-slate-700">모바일 최적화 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-orange-500"></i>
+                            </a>
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-amber-300 group transition-all text-left">
+                                <div class="flex items-center gap-3"><div class="w-8 h-8 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-sm font-bold text-slate-700">PC 와이드 버전</span></div>
+                                <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
