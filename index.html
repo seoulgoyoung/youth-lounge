@@ -79,7 +79,7 @@
             to { box-shadow: 0 0 18px rgba(249, 115, 22, 0.45), 0 10px 40px -5px rgba(234, 88, 12, 0.2); }
         }
 
-        /* 낙엽 흩날리기 애니메이션 효과 */
+        /* 낙엽 흩날리기 애니메이션 효과 (개수 줄이고 은은하게 수정) */
         .falling-leaves-container {
             position: fixed;
             top: 0;
@@ -97,11 +97,11 @@
             user-select: none;
             cursor: default;
             animation-name: leaf-fall, leaf-sway;
-            animation-duration: 10s, 3s;
+            animation-duration: 16s, 4s;
             animation-timing-function: linear, ease-in-out;
             animation-iteration-count: infinite, infinite;
             animation-play-state: running, running;
-            opacity: 0.7;
+            opacity: 0.45;
         }
 
         @keyframes leaf-fall {
@@ -111,14 +111,13 @@
 
         @keyframes leaf-sway {
             0% { transform: translateX(0px) rotate(0deg); }
-            50% { transform: translateX(50px) rotate(180deg); }
+            50% { transform: translateX(40px) rotate(180deg); }
             100% { transform: translateX(0px) rotate(360deg); }
         }
 
-        /* 낙엽 위치/지연 개수 감소 및 속도/투명도 완화 */
-        .leaf:nth-child(1) { left: 15%; animation-duration: 15s, 4.5s; animation-delay: 0s, 0s; font-size: 16px; opacity: 0.45; }
-        .leaf:nth-child(2) { left: 52%; animation-duration: 18s, 5.2s; animation-delay: 5s, 1.5s; font-size: 19px; opacity: 0.5; }
-        .leaf:nth-child(3) { left: 85%; animation-duration: 16s, 4.8s; animation-delay: 9s, 0.8s; font-size: 16px; opacity: 0.45; }
+        .leaf:nth-child(1) { left: 20%; animation-duration: 18s, 4.5s; animation-delay: 0s, 0s; font-size: 16px; }
+        .leaf:nth-child(2) { left: 60%; animation-duration: 20s, 5.2s; animation-delay: 6s, 1.5s; font-size: 18px; }
+        .leaf:nth-child(3) { left: 85%; animation-duration: 17s, 4.8s; animation-delay: 10s, 0.8s; font-size: 15px; }
 
         /* 일정 카드 따뜻한 가을 톤 강조 */
         .event-highlight-card {
@@ -186,7 +185,7 @@
 </head>
 <body class="text-slate-800">
 
-    <!-- 흩날리는 가을 낙엽 효과 (수량 감소 및 은은하게 연출) -->
+    <!-- 흩날리는 가을 낙엽 효과 (은은하게 개수 조정) -->
     <div class="falling-leaves-container">
         <div class="leaf">🍁</div>
         <div class="leaf">🍂</div>
@@ -239,7 +238,6 @@
                 청년ON웹진
             </h2>
             <div class="celebrate-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 card-shadow relative overflow-hidden group text-center">
-                
                 <div class="relative z-10">
                     <div class="inline-block px-4 py-1.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white text-xs font-bold rounded-full mb-5 shadow-lg shadow-amber-200 animate-bounce">
                         축! 9+10월호 발간! 🍁🍂
@@ -251,31 +249,31 @@
                     <p class="text-sm text-slate-500 font-bold mb-8 leading-relaxed">
                         청년 취업 지원 허브! 서울고용센터의 이야기들을 한 눈에!✨
                     </p>
-                    <!-- 웹진 버튼 영역 (모바일 / PC / PDF) -->
+                    <!-- 웹진 버튼 영역 (모바일 / PC 분리) -->
                     <div class="grid grid-cols-2 gap-3 mb-3">
-                        <a href="https://seoulgoyoung.github.io/web-zine09-10/" target="_blank" rel="noopener noreferrer" class="py-3.5 bg-amber-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-amber-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-amber-700">
+                        <a href="https://seoulgoyoung.github.io/web-zine09-10/" target="_blank" class="py-3.5 bg-amber-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-amber-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-amber-700">
                             <i class="fas fa-mobile-alt text-base mb-0.5"></i>
                             <span>웹진 (모바일)</span>
                             <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
                         </a>
-                        <a href="https://beautiful-pudding-972efa.netlify.app/" target="_blank" rel="noopener noreferrer" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
+                        <a href="https://beautiful-pudding-972efa.netlify.app/" target="_blank" class="py-3.5 bg-orange-600 text-white text-center rounded-2xl font-black text-sm shadow-lg shadow-orange-200 active:scale-95 transition-all flex flex-col items-center justify-center gap-0.5 hover:bg-orange-700">
                             <i class="fas fa-desktop text-base mb-0.5"></i>
                             <span>웹진 (PC)</span>
                             <span class="text-[11px] font-medium opacity-90">(9+10월호)</span>
                         </a>
                     </div>
-                    <a href="https://drive.google.com/file/d/1ZzAIJB5FUzQnyFFCC7LnsXF972gzCYgg/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="w-full py-3 bg-white text-amber-700 border-2 border-amber-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex items-center justify-center gap-2 hover:bg-amber-50 mb-8">
+                    <a href="https://drive.google.com/file/d/1ZzAIJB5FUzQnyFFCC7LnsXF972gzCYgg/view?usp=sharing" target="_blank" class="w-full py-3 bg-white text-amber-700 border-2 border-amber-600 rounded-2xl font-black text-sm active:scale-95 transition-all flex items-center justify-center gap-2 hover:bg-amber-50 mb-8">
                         <i class="fas fa-file-pdf"></i>
                         <span>PDF 보러가기 (9+10월호)</span>
                     </a>
                     <div class="bg-amber-50/60 backdrop-blur-sm rounded-2xl p-4 sm:p-5 border border-amber-200/70">
                         <p class="text-xs font-black text-amber-700 uppercase tracking-widest mb-3">Webzine Archive Page</p>
                         <div class="flex flex-col gap-2">
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-orange-300 group transition-all text-left">
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine.m/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-orange-300 group transition-all text-left">
                                 <div class="flex items-center gap-3"><div class="w-8 h-8 bg-orange-50 text-orange-600 rounded-lg flex items-center justify-center"><i class="fas fa-mobile-alt"></i></div><span class="text-sm font-bold text-slate-700">모바일 최적화 버전</span></div>
                                 <i class="fas fa-chevron-right text-slate-300 group-hover:text-orange-500"></i>
                             </a>
-                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" rel="noopener noreferrer" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-amber-300 group transition-all text-left">
+                            <a href="https://seoulgoyoung.github.io/on-airwebzine/" target="_blank" class="w-full flex items-center justify-between bg-white p-3 rounded-xl border border-slate-200 hover:border-amber-300 group transition-all text-left">
                                 <div class="flex items-center gap-3"><div class="w-8 h-8 bg-amber-50 text-amber-600 rounded-lg flex items-center justify-center"><i class="fas fa-desktop"></i></div><span class="text-sm font-bold text-slate-700">PC 와이드 버전</span></div>
                                 <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500"></i>
                             </a>
@@ -301,9 +299,56 @@
                 
                 <div class="space-y-6 relative z-10">
 
+                    <!-- [청년 AI:N.E.X.T 스쿨 신규 추가] -->
+                    <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative border-2 border-orange-200">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <span class="inline-block px-3 py-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white text-xs font-black rounded-full mb-2 tracking-wide shadow-sm">창업 및 해외경험 특화</span>
+                                <h3 class="font-black text-2xl text-slate-900 leading-tight">청년 AI:N.E.X.T 스쿨</h3>
+                                <p class="text-xs text-amber-700 font-bold mt-1">AI를 통해 청년의 경험을 내일의 기회로, <br>New Experience X Tomorrow</p>
+                            </div>
+                            <div class="w-8 h-8 bg-orange-100 text-orange-700 rounded-full flex items-center justify-center opacity-90 shrink-0 ml-1">
+                                <i class="fas fa-robot text-sm"></i>
+                            </div>
+                        </div>
+
+                        <!-- 공통 정보 배너 -->
+                        <div class="bg-amber-50/80 backdrop-blur-sm rounded-2xl p-3.5 border border-amber-200/70 text-xs text-slate-700 space-y-1.5 font-medium mb-4">
+                            <p>📅 <b>일시 :</b> 2026년 10월 매주 화요일 14:00~17:00 (총 4회차)</p>
+                            <p>👥 <b>대상 :</b> 창업에 꿈이 있는 청년, 해외경험(워홀, 인턴 등) 후 귀국한 19~34세 구직 청년</p>
+                            <p>🗣️ <b>강사 :</b> 디지털리터러시협회 김묘은 대표</p>
+                            <p>💡 <b>내용 :</b> AI시대의 일자리 이해 및 자신의 경험을 이용한 사업 아이템 구체화</p>
+                            <p>📍 <b>장소 :</b> 서울고용센터 1층 청년ON라운지</p>
+                        </div>
+
+                        <!-- 4주차 세부 커리큘럼 아코디언/그리드 -->
+                        <div class="bg-white rounded-2xl p-4 border border-amber-100 mb-5 shadow-sm">
+                            <h4 class="text-xs font-black text-slate-800 uppercase tracking-wide mb-3 flex items-center gap-1.5">
+                                <i class="fas fa-calendar-alt text-amber-600"></i> 주차별 세부 일정 안내
+                            </h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="font-black text-amber-600">1회차 (10.6):</span> AI 시대의 일자리 이해
+                                </div>
+                                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="font-black text-amber-600">2회차 (10.13):</span> 창업·사업화 전략 실습
+                                </div>
+                                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="font-black text-amber-600">3회차 (10.20):</span> 사업 아이템 구체화
+                                </div>
+                                <div class="p-2.5 bg-slate-50 rounded-xl border border-slate-100">
+                                    <span class="font-black text-amber-600">4회차 (10.27):</span> 사업계획서 발표 및 피드백
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://naver.me/xRgs5XMU" target="_blank" class="w-full inline-flex items-center justify-center py-3.5 bg-gradient-to-r from-amber-600 to-orange-600 text-white rounded-2xl text-sm font-black active:scale-95 transition-all shadow-lg shadow-amber-200 hover:opacity-95">
+                            신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
+                        </a>
+                    </div>
+
                     <!-- [취업준비콘서트 일자리톡톡] -->
                     <div class="event-highlight-card rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-7 relative">
-                        <!-- 메인 헤더 -->
                         <div class="flex items-start justify-between mb-3">
                             <div>
                                 <span class="inline-block px-3 py-1 bg-amber-100 text-amber-900 text-xs font-black rounded-full mb-2 tracking-wide">현직자 토크</span>
@@ -315,19 +360,17 @@
                             </div>
                         </div>
 
-                        <!-- 공통 정보 배너 -->
                         <div class="bg-amber-50/80 backdrop-blur-sm rounded-2xl p-3.5 border border-amber-200/70 text-xs text-slate-600 space-y-1 font-medium mb-5">
                             <p>📍 <b>장 소 :</b> 서울고용센터 1층 청년ON라운지</p>
                             <p>📝 <b>공통 내용 :</b> 기업이념, 조직문화, 인재상 및 채용트렌드, 직무설명</p>
                         </div>
 
-                        <!-- 기업별 라인업 서브 타이틀 -->
                         <div class="flex items-center gap-1.5 mb-3 px-1">
                             <i class="fas fa-building text-amber-600 text-sm"></i>
                             <h4 class="text-xs font-black text-slate-800 uppercase tracking-wide">기업별 콘서트 일정 및 신청</h4>
                         </div>
 
-                        <!-- 세부 기업 타임라인 가지(Branch) 리스트 -->
+                        <!-- 세부 기업 타임라인 리스트 -->
                         <div class="space-y-3 relative border-l-2 border-amber-300 pl-3 sm:pl-4 ml-1">
 
                             <!-- [기업 1] 한미그룹 편 (10.7) -->
@@ -337,7 +380,7 @@
                                         <span class="text-sm sm:text-base font-black text-slate-800 leading-snug">&lt;한미그룹 편&gt;</span>
                                         <span class="text-xs font-bold text-amber-700 whitespace-nowrap">📅 2026. 10. 7. (수) 14:00</span>
                                     </div>
-                                    <a href="https://forms.gle/EWvEtcbLDrjGxNbH8" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center py-2.5 bg-amber-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-amber-700">
+                                    <a href="https://forms.gle/EWvEtcbLDrjGxNbH8" target="_blank" class="w-full inline-flex items-center justify-center py-2.5 bg-amber-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md hover:bg-amber-700">
                                         신청 바로가기 <i class="fas fa-chevron-right ml-1.5 text-xs"></i>
                                     </a>
                                 </div>
@@ -355,27 +398,27 @@
             <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-amber-950"><span class="w-2 h-7 bg-amber-600 rounded-full"></span>상담 &amp; 컨설팅 예약</h2>
             <div class="bg-white rounded-[2.5rem] p-4 sm:p-6 card-shadow border-2 border-amber-100">
                 <div class="space-y-4">
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">1:1 취업 컨설팅</h4><p class="text-xs text-slate-400 font-medium">개인별 맞춤 심층 진로/이력서/면접 컨설팅</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6602299" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6602299" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">주거복지상담</h4><p class="text-xs text-slate-400 font-medium text-wrap">매월 2,3,4주 수요일 | 공공임대 및 1인가구 서비스</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7155040" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7155040" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">금융/재무설계 상담</h4><p class="text-xs text-slate-400 font-medium text-wrap">매주 화요일 | 자산·부채 관리 및 신용·금융 일반 상담</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/8018287" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/8018287" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">기초 법률상담</h4><p class="text-xs text-slate-400 font-medium text-wrap">매월 2,4주 금요일 | 근로계약, 노동관계법 등 법률 이슈 사전 예방 상담</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
-                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7660201" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://booking.naver.com/booking/6/bizes/1355869/items/7660201" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">일경험 상담</h4><p class="text-xs text-slate-400 font-medium text-wrap">매주 화, 수요일 | 미래내일 일경험지원사업 상세 안내</p></div>
                         <i class="fas fa-chevron-right text-slate-300 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
-                    <a href="https://m.worldjob.or.kr/visitcounselNew/visitcounselCalendarList.do?menuId=1000006348" target="_blank" rel="noopener noreferrer" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
+                    <a href="https://m.worldjob.or.kr/visitcounselNew/visitcounselCalendarList.do?menuId=1000006348" target="_blank" class="w-full flex justify-between items-center p-4 sm:p-5 rounded-2xl border-2 border-slate-100 hover:bg-amber-50 transition-all text-left group">
                         <div class="flex-1"><h4 class="font-bold text-slate-800 text-base mb-1">해외취업 상담</h4><p class="text-xs text-slate-400 font-medium">격주 목, 금 | 월드잡플러스 연계</p></div>
                         <i class="fas fa-arrow-right text-slate-200 group-hover:text-amber-500 shrink-0 ml-2"></i>
                     </a>
@@ -394,7 +437,7 @@
                             <h4 class="font-bold text-slate-800 text-lg">스터디룸 4,5,6</h4>
                         </div>
                         <p class="text-xs text-slate-500 font-medium mb-4 leading-relaxed">최대 6명 수용 가능한 최적의 스터디 공간입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6553048" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-amber-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all text-center hover:bg-amber-700">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6553048" target="_blank" class="block w-full py-3 bg-amber-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all text-center hover:bg-amber-700">예약하기</a>
                     </div>
                     <div class="p-4 sm:p-5 rounded-2xl border-2 border-slate-100 bg-white card-shadow">
                         <div class="flex items-center gap-4 mb-3">
@@ -402,7 +445,7 @@
                             <h4 class="font-bold text-slate-800 text-lg">AI면접실</h4>
                         </div>
                         <p class="text-xs text-slate-500 font-medium mb-4 leading-relaxed">인공지능 기반의 최신 면접 연습 시스템입니다.</p>
-                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" rel="noopener noreferrer" class="block w-full py-3 bg-orange-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md text-center hover:bg-orange-700">예약하기</a>
+                        <a href="https://booking.naver.com/booking/6/bizes/1355869/items/6620845" target="_blank" class="block w-full py-3 bg-orange-600 text-white rounded-xl text-sm font-bold active:scale-95 transition-all shadow-md text-center hover:bg-orange-700">예약하기</a>
                     </div>
                 </div>
             </div>
@@ -447,7 +490,7 @@
                 <div class="text-center pb-2">
                     <p class="font-black text-slate-800 text-lg">서울고용복지플러스센터 1층</p>
                     <p class="text-xs text-slate-400 font-medium mb-6">서울특별시 중구 삼일대로 363 (서울지방고용노동청)</p>
-                    <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-base font-bold shadow-lg active:scale-95 transition-all text-center hover:opacity-95"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
+                    <a href="https://map.naver.com/p/directions/-/14136134.132958163,4518461.71490588,%EC%84%9C%EC%9A%B8%EA%B3%A0%EC%9A%A9%EB%B3%B5%EC%A7%80%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%BC%ED%84%B0,1845904326,PLACE_POI/-/car?c=15.00,0,0,0,dh" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 bg-[#03C75A] text-white rounded-xl text-base font-bold shadow-lg active:scale-95 transition-all text-center hover:opacity-95"><i class="fas fa-location-arrow"></i>네이버 지도로 길찾기</a>
                 </div>
             </div>
         </section>
@@ -456,14 +499,14 @@
         <section class="mb-12 px-1">
             <h2 class="text-2xl font-black mb-6 flex items-center gap-2 text-amber-950"><i class="fab fa-youtube text-red-500"></i>미디어 속 청년ON라운지</h2>
             <div class="grid grid-cols-2 gap-3.5">
-                <a href="https://www.youtube.com/watch?v=8pNXvE5pb38" target="_blank" rel="noopener noreferrer" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all text-left">
+                <a href="https://www.youtube.com/watch?v=8pNXvE5pb38" target="_blank" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all text-left">
                     <div class="aspect-video w-full rounded-2xl overflow-hidden mb-3 relative">
                         <img src="https://img.youtube.com/vi/8pNXvE5pb38/mqdefault.jpg" alt="EP.1" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/20"><i class="fas fa-play text-white text-2xl"></i></div>
                     </div>
                     <div class="px-1"><h4 class="text-sm font-black text-slate-800 leading-tight">취재 영상 EP.1</h4><p class="text-xs text-slate-400 mt-1">서울고용센터 구석구석 탐방</p></div>
                 </a>
-                <a href="https://www.youtube.com/watch?v=t9VuIGy1j1Q" target="_blank" rel="noopener noreferrer" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all text-left">
+                <a href="https://www.youtube.com/watch?v=t9VuIGy1j1Q" target="_blank" class="bg-white rounded-3xl p-3 card-shadow border border-slate-100 flex flex-col active:scale-95 transition-all text-left">
                     <div class="aspect-video w-full rounded-2xl overflow-hidden mb-3 relative">
                         <img src="https://img.youtube.com/vi/t9VuIGy1j1Q/mqdefault.jpg" alt="EP.2" class="w-full h-full object-cover">
                         <div class="absolute inset-0 flex items-center justify-center bg-black/20"><i class="fas fa-play text-white text-2xl"></i></div>
@@ -477,9 +520,9 @@
         <footer class="footer-arch text-center pt-20 pb-16 -mx-2.5 px-2.5 sm:-mx-5 sm:px-5 relative">
             <h3 class="text-white font-black text-2xl mb-12 wide-tracking leading-relaxed">청년의 내일을 여는 곳,<br>청년ON라운지</h3>
             <div class="flex justify-center gap-8 mb-16">
-                <a href="https://www.instagram.com/moel_seoulew/" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-pink-500 hover:scale-110 transition-transform"><i class="fab fa-instagram"></i></a>
-                <a href="https://blog.naver.com/twd0908" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-amber-600 hover:scale-110 transition-transform"><i class="fas fa-blog"></i></a>
-                <a href="https://open.kakao.com/o/gyJqfYei" target="_blank" rel="noopener noreferrer" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-yellow-500 hover:scale-110 transition-transform"><i class="fas fa-comment"></i></a>
+                <a href="https://www.instagram.com/moel_seoulew/" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-pink-500 hover:scale-110 transition-transform"><i class="fab fa-instagram"></i></a>
+                <a href="https://blog.naver.com/twd0908" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-amber-600 hover:scale-110 transition-transform"><i class="fas fa-blog"></i></a>
+                <a href="https://open.kakao.com/o/gyJqfYei" target="_blank" class="w-14 h-14 bg-white rounded-[1.2rem] flex items-center justify-center text-2xl shadow-lg text-yellow-500 hover:scale-110 transition-transform"><i class="fas fa-comment"></i></a>
             </div>
             <p class="text-xs text-white/70 font-bold uppercase tracking-widest">© 2026 Seoul Employment Center Youth ON Lounge</p>
         </footer>
